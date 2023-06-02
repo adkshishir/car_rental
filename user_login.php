@@ -19,22 +19,30 @@
                 if (isset($_POST['submit'])) {
                     $usrname = $_POST['username'];
                     $password = $_POST['password'];
-                    $password=md5($password);
+                    $password = md5($password);
                     $emailCheck = "SELECT * FROM users WHERE email='$email' AND password='$password'";
                     $emailCount = mysqli_query($connect, $emailCheck);
                     $arr = $emailCount->fetch_assoc();
                     $count = mysqli_num_rows($emailCount);
                     if ($count == 1) {
-                      session_start();
-                      $_SESSION['email'] = $arr['email'];
-                      $_SESSION['id'] = $arr['uid'];
-                      $_SESSION['role']=$arr['status'];
-                      ?>
-                      <script>
-                        location.replace("index.php");
-                      </script>
-                      <?php
-                 
+                        session_start();
+                        $_SESSION['email'] = $arr['email'];
+                        $_SESSION['id'] = $arr['uid'];
+                        $_SESSION['role'] = $arr['status'];
+
+                        if ($arr['status'] == 'a') {
+                ?>
+                            <script>
+                                location.replace("admin/index.php");
+                            </script>
+                        <?php
+                        } else {
+                        ?>
+                            <script>
+                                location.replace("index.php");
+                            </script>
+                <?php
+                        }
                     }
                 }
                 ?>
