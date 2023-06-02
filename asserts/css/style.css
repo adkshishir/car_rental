@@ -6,14 +6,20 @@
 }
 .main-header {
   justify-content: center;
+  display: grid;
   align-items: center;
   width: 100vw;
-  top: -72px;
+  top: -95px;
   left: 0;
   position: sticky;
   position: -webkit-sticky;
+  box-shadow: 0 5px 5px #ccc;
+  background: white;
+  z-index: 2;
 }
 .title {
+  margin: 1rem;
+  border-radius: 1rem;
   font-size: 4rem;
   font-weight: 600;
   background-color: rgb(36, 0, 0);
@@ -23,7 +29,7 @@
   display: flex;
   justify-content: center;
   list-style: none;
-  box-shadow: 0 5px 5px #ccc;
+  /* box-shadow: 0 5px 5px #ccc; */
   width: 100%;
 }
 .nav-ul {
@@ -31,6 +37,7 @@
   display: flex;
   align-items: center;
   background-color: white;
+  border-top: 2px black solid;
 }
 .nav-element {
   margin: 0 2rem;

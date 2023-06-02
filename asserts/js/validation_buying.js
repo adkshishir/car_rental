@@ -1,4 +1,4 @@
-export function validateForm_Buying() {
+function validateForm_Buying() {
   let buyerId = document.forms["rentalForm"]["buyer_id"].value;
   let carId = document.forms["rentalForm"]["car_id"].value;
   let rentalStartDate = document.forms["rentalForm"]["rental_start_date"].value;
