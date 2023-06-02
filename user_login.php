@@ -28,6 +28,7 @@
                       session_start();
                       $_SESSION['email'] = $arr['email'];
                       $_SESSION['id'] = $arr['uid'];
+                      $_SESSION['role']=$arr['status'];
                       ?>
                       <script>
                         location.replace("index.php");
