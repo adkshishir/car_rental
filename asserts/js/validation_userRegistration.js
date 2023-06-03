@@ -5,43 +5,52 @@ function validationForm_userRegistation() {
   let address = document.getElementById("address").value;
   let password = document.getElementById("password").value;
   let conpassword = document.getElementById("conpass").value;
+  let passwordError = document.getElementById("passwordError");
+  let conpassError = document.getElementById("conpassError");
 
+  const errorMessages = document.querySelectorAll(".error");
+  errorMessages.forEach(function (errorMessage) {
+    errorMessage.textContent = "";
+  });
   if (name === "") {
-    alert("please enter your name first");
+    let nameError = document.getElementById("nameError");
+    nameError.textContent = "please enter your name first";
     return false;
   }
   if (email === "") {
-    alert("please enter your email ");
+    let emailError = document.getElementById("emailError");
+    emailError.textContent = "please enter your email ";
     return false;
   }
   if (contact === "") {
-    alert("please enter your contact");
+    let contactError = document.getElementById("contactError");
+    contactError.textContent = "contact is required";
     return false;
   }
 
   if (address === "") {
-    alert("please enter your address");
+    let addressError = document.getElementById("addressError");
+    addressError.textContent = "please enter you address";
+    return false;
   }
   if (password === "") {
-    alert("you forget to enter your password");
+    passwordError.textContent = "you forget to enter your password";
     return false;
   }
   if (length(password) <= 3) {
-    alert("password must be at least 4 characters");
+    passwordError.textContent = "password must be at least 4 characters";
   }
   if (length(password) >= 50) {
-    alert("password must be at less than 50 characters");
+    passwordError.textContent = "password must be at less than 50 characters";
     return false;
   }
   if (conpassword === "") {
-    alert("you forget to re enter your password");
+    conpassError.textContent = "you forget to re enter your password";
     return false;
   }
 
   if (password !== conpassword) {
-    alert(
-      "your password is not same with your conform password plz recheck your password"
-    );
+    conpassError.textContent = "pass is not same ";
     return false;
   }
 }
