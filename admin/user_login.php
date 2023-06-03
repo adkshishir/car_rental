@@ -14,7 +14,7 @@
     </header>
     <main>
         <section>
-            <form action="#" method="post" name="login_form">
+            <form action="#" method="post" >
                 <?php
                 if (isset($_POST['submit'])) {
                     $usrname = $_POST['username'];
