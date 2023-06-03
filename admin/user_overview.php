@@ -1,12 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<?php
+include '../include/admin_header.php';
+?>
+<title>User Overview</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1></h1>
+    </header>
+    <main>
+        <h3></h3>
+        <section>
+            <table>
+                <tr>
+                    <th>S.N</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ram</td>
+                    <td>ram@gmail.com</td>
+                    <td><a href="user_view.php?id=1"><button>View more</button></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ram</td>
+                    <td>ram@gmail.com</td>
+                    <td><a href=""><button>View more</button></a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
 </body>
+
 </html>

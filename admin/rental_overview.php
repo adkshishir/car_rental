@@ -18,7 +18,8 @@
                     <th>CName</th>
                     <th>UID</th>
                     <th>UName</th>
-                    <th>LOB</th>
+                    <th title="Length of book">LOB</th>
+                    <th>Token</th>
                     <th>Order date</th>
                     <th>Action</th>
                 </tr>
@@ -28,6 +29,7 @@
                     <td>2</td>
                     <td>Ram</td>
                     <td>2</td>
+                    <td>20308430284203480</td>
                     <td>2094332</td>
                     <td>
                         <a href="http://"><button>View more</button></a>
@@ -40,6 +42,7 @@
                     <td>2</td>
                     <td>Ram</td>
                     <td>2</td>
+                    <td>208340284023423</td>
                     <td>2094332</td>
                     <td>
                         <a href="http://"><button>View more</button></a>
