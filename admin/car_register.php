@@ -24,6 +24,7 @@
                     $model = $_POST['model'];
                     $color = $_POST['color'];
                     $price = $_POST['price'];
+                    $desc = $_POST['description'];
 
                     $filename = strtolower($filename);
                     $filename = str_replace(" ", "", $filename);
@@ -63,6 +64,10 @@
                 <div class="price">
                     <label for="price">Enter the price per day($):</label>
                     <input type="number" step="0.01" name="price" id="price"><br />
+                </div>
+                <div class="desc">
+                    <label for="description">Enter details:</label>
+                    <input type="text" name="description" id="description"><br />
                 </div>
                 <div class="submit">
                     <button type="submit" name="submit">Submit</button>
