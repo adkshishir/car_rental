@@ -1,9 +1,11 @@
+/*css for all */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
+/* header css */
 .main-header {
   justify-content: center;
   display: grid;
@@ -17,6 +19,7 @@
   background: white;
   z-index: 2;
 }
+
 .title {
   margin: 1rem;
   border-radius: 1rem;
@@ -50,6 +53,7 @@
 .nav-ul li:hover {
   color: rgb(255, 103, 103);
 }
+/* body css */
 .main {
   z-index: -1;
   background-color: rgb(255, 238, 238);
@@ -76,4 +80,57 @@
 }
 .car-detail:hover {
   box-shadow: 3px 3px 3px rgba(255, 206, 206, 0.764);
+}
+
+/* form css */
+form {
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px rgb(204, 205, 255);
+}
+.form-section {
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+  display: grid;
+}
+input {
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  border: none;
+  box-shadow: 0 1px 2px rgb(142, 157, 255);
+  padding: 0.3rem 0.5rem;
+}
+::placeholder {
+  color: rgb(205, 205, 205);
+  font-size: medium;
+}
+input:hover {
+  outline: rgb(0, 51, 255) solid 2px;
+}
+input:focus {
+  background-color: rgb(222, 226, 255);
+  outline: blue solid 2px;
+}
+
+.error {
+  height: 20px;
+  color: rgb(255, 123, 123);
+}
+.button {
+  padding: 5px;
+  margin: auto;
+  font-size: 1.3rem;
+  background-color: rgb(65, 65, 255);
+  color: white;
+  border-radius: 0.5rem;
+  outline: solid 3px rgba(118, 118, 118, 0.775);
+  border: none;
+}
+.button:hover {
+  background-color: rgb(52, 52, 255);
+  outline: solid 3px blue;
+  cursor: pointer;
 }
