@@ -1,13 +1,15 @@
 function validationForm_login() {
-  let email = document.forms["login_form"]["username"].value;
-  let password = document.forms["login_form"]["password"].value;
+  let email = document.getElementsById("email").value;
+  let password = document.getElementsById("password").value;
+  let emailError = document.getElementsById("emailError");
+  let passwordError = document.getElementsById("passwordError");
+
   if (email === "") {
-    alert("please enter a valid email");
+    emailError.textContent = "please enter a valid email";
     return false;
   }
   if (password === "") {
-    alert("please enter password");
-    false;
+    passwordError.textContent = "please enter password";
+    return false;
   }
-  // more if the id and password are not match didnot login
 }

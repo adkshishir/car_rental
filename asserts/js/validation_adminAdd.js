@@ -1,27 +1,40 @@
 function validationForm_adminAdd() {
-  let make = document.forms["addCarForm"]["make"].value;
-  let model = document.forms["addCarForm"]["model"].value;
-  let year = document.forms["addCarForm"]["year"].value;
-  let rentalrate = document.forms["addCarForm"]["rental_rate"].value;
+  let name = document.getElementById("name").value;
+  let photo = document.getElementById("photo").value;
+  let model = document.getElementById("model").value;
+  let color = document.getElementById("color").value;
+  let price = document.getElementById("price").value;
+  let desc = document.getElementById("description").value;
 
-  if (make === "") {
-    alert("Please enter the car make.");
+  const errorMessages = document.querySelectorAll(".error");
+  errorMessages.forEach(function (errorMessage) {
+    errorMessage.textContent = "";
+  });
+
+  if (name === "") {
+    let nameError = document.getElementById("nameError");
+
+    nameError.textContent = "Please enter the car name.";
     return false;
   }
   if (model === "") {
-    alert("please enter the model of car");
+    let modelError = document.getElementById("modelError");
+    modelError.textContent = "please enter the model of car";
     return false;
   }
-  if (year === "") {
-    alert("plear enter when did this car made");
+  if (color === "") {
+    let colorError = document.getElementById("colorError");
+    colorError.textContent = "Enter the color of the car";
     return false;
   }
-  if (isNaN(year) || year < 1900 || year > new Date().getFullYear()) {
-    alert("please enter the valid year of the car");
+  if (price === "") {
+    let priceError = document.getElementById("priceError");
+    priceError.textContent = "you forget to enter the price of the car";
     return false;
   }
-  if (rentalrate === "" || isNaN(rentalrate) || rentalrate <= 0) {
-    alert("please enter the valid rental rate.");
+  if (photo === "") {
+    let photoError = document.getElementById("photoError");
+    photoError.textContent = "forgot to enter the photo of the car";
     return false;
   }
 }
