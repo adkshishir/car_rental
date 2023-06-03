@@ -1,3 +1,7 @@
+<?php
+    require '../process/db.php';
+    // require '../process/secure.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +34,7 @@
                     $filename = explode(".", $filename);    // after using explode $filename will act as array and element will be separated after . is found
                     $n = count($filename);
                     $n--;
+                    if(!empty($name)&&!(empty($model))&&!(empty($color))&&!(empty($price))&&!(empty($desc))){
                     if (!(($filename[$n] == "jpg") || ($filename[$n] == "png") || ($filename[$n] == "jpeg"))) {
                         $filemsg = "* File must be of type JPEG OR JPG OR PNG.";
                     } else {
@@ -37,11 +42,14 @@
                             $filemsg = "* File size must be less than 2MB.";
                         } else {
                             $uploadfile = $filename[0] . "_" . time() . "." . $filename[$n];
-                            if (move_uploaded_file($_FILES['photo']['tmp_name'], 'uploads/' . $uploadfile)) {
+                            if (move_uploaded_file($_FILES['photo']['tmp_name'], '../uploads/' . $uploadfile)) {
                                 //sql query goes here.
+                                $insert="INSERT INTO car(name,photo,model,color,price,desc) VALUES('$name','$uploadfile','$model','$color','$price','$desc')";
+                                $carresult=mysqli_query($connect,$insert);
                             }
                         }
                     }
+                }
                 }
                 ?>
                 <div class="name">
