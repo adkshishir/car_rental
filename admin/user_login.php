@@ -11,11 +11,13 @@
 
 <body>
     <header>
-        <h2>Enter your details</h2>
+        <!-- <h2>Enter your details</h2> -->
     </header>
     <main>
-        <section>
-            <form action="#" method="post" >
+        <section class='form-section'>
+       <div>
+       <h2>Enter your details</h2>
+            <form action="#" method="post" onsubmit='return validationForm_login()' >
                 <?php
                 if (isset($_POST['submit'])) {
                     $usrname = $_POST['username'];
@@ -24,17 +26,25 @@
                 ?>
                 <div class="email">
                     <label for="email">Enter your username:
-                    </label>
+                    </label><br/>
                     <input type="text" name="username" id="email">
+                    <div id='usernameError' class='error'></div>
+
                 </div>
                 <div class="pass">
-                    <label for="password">Enter your password:</label>
+                    <label for="password">Enter your password:</label><br/>
                     <input type="password" name="password" id="password">
+                    <div id='passwordError' class='error'></div>
+
                 </div>
             </form>
+       </div>
         </section>
     </main>
     <footer>
 
     </footer>
+    <script src='../asserts/js/validation_login.js'>
+
+    </script>
 </body>
