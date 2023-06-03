@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Register</title>
-    <link rel="stylesheet" href="../asserts/css/style.css"/>
 </head>
 
 <body>
@@ -47,6 +46,11 @@
                                 //sql query goes here.
                                 $insert="INSERT INTO car(name,photo,model,color,price,desc) VALUES('$name','$uploadfile','$model','$color','$price','$desc')";
                                 $carresult=mysqli_query($connect,$insert);
+                                if($carresult){
+                                    ?>
+                                        <script>loaction.replace("index.php");</script>
+                                    <?php
+                                }
                             }
                         }
                     }
