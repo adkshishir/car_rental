@@ -1,5 +1,6 @@
 <!-- Car ko bara ma edit garni page  -->
 <?php
+    include '../include/admin_header.php';
     require '../process/db.php';
     // require '../process/secure.php';
     if(isset($_GET['id'])){
@@ -7,13 +8,7 @@
         $selectcar="SELECT * FROM car WHERE cid='$cid'";
         $cararr=mysqli_query($connect,$selectcar);
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Edit</title>
 </head>
 
@@ -75,15 +70,15 @@
                 </div>
                 <div class="model">
                     <label for="model">Car model:</label>
-                    <input type="text" name="model" value="<?php echo $cararr['name'];?>" id="model"><br />
+                    <input type="text" name="model" value="<?php echo $cararr['model'];?>" id="model"><br />
                 </div>
                 <div class="color">
-                    <label for="color">Color:</label>
-                    <input type="text" name="color" value="<?php echo $cararr['name'];?>" id="color"><br />
+                    <label for="color">Car Color:</label>
+                    <input type="text" name="color" value="<?php echo $cararr['color'];?>" id="color"><br />
                 </div>
                 <div class="price">
                     <label for="price">Price per day($):</label>
-                    <input type="number" step="0.01" name="price" value="<?php echo $cararr['name'];?>" id="price"><br />
+                    <input type="number" step="0.01" name="price" value="<?php echo $cararr['price'];?>" id="price"><br />
                 </div>
                 <div class="desc">
                     <label for="description">Enter details:</label>
