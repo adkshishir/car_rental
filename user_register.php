@@ -1,3 +1,6 @@
+<?php
+require 'process/db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,18 +9,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="asserts/css/style.css"/>
-    
+    <link rel="stylesheet" href="asserts/css/style.css" />
+
 </head>
 
 <body>
     <header>
-        
+
     </header>
     <main>
         <section class='form-section'>
-       <div>
-       <h2>Registration Form</h2>
+        <h2>registration Form</h2>
             <form action="#" method="post" onsubmit='return validationForm_userRegistation()'>
                 <?php
                 if (isset($_POST['submit'])) {
@@ -27,33 +29,68 @@
                     $address = $_POST['address'];
                     $password = $_POST['password'];
                     $conpass = $_POST['conpass'];
+
+                    #email checking starts here
+                    $emailcount = 0;
+                    if (!empty($email)) {
+                        $select = "SELECT email FROM users where email='$email'";
+                        $emailcheck = mysqli_query($connect, $select);
+                        $emailcount = mysqli_num_rows($emailcheck);
+                        if ($emailcount != 0) {
+                            $emailmsg = "* Email already exists in database";
+                        }
+                    }
+                    #email checking ends here
+
+                    if ((!empty($name)) && (!empty($email)) && (!empty($contact)) && (!empty($address)) && (strlen($password) > 4) && ($password == $conpass) && ($emailcount == 0)) {
+                        $password = md5($password);
+                        $insert = "INSERT INTO users (name,email,contact,address,password) VALUES('$name','$email','$contact','$address','$password')";
+                        $result = mysqli_query($connect, $insert);
+                        if ($result) {
+                            if (isset($_SESSION['id'])) {
+                ?>
+                                <script>
+                                    history.back();
+                                </script>
+                            <?php
+                            } else {
+                            ?>
+                                <script>
+                                    location.replace("user-login.php");
+                                </script>
+                <?php
+                            }
+                        }
+                    } else {
+                        echo "Doesn't created";
+                    }
                 }
                 ?>
                 <div class="name">
                     <label for="name">Name:</label></br>
-                    <input type="text" name="name" id="name" placeholder="Name.." ><br />
+                    <input type="text" name="name" id="name" placeholder="Name.."><br />
                     <div id='nameError' class='error'></div>
                 </div>
                 <div class="email">
-                    <label for="email" >Email:</label></br>
+                    <label for="email">Email:</label></br>
                     <input type="email" name="email" id="email" placeholder="Email.."><br />
                     <div id='emailError' class='error'></div>
 
                 </div>
                 <div class="address">
-                    <label for="address" >Address:</label></br>
+                    <label for="address">Address:</label></br>
                     <input type="text" name="address" id="address" placeholder="Address"><br />
                     <div id='addressError' class='error'></div>
 
                 </div>
                 <div class="contact">
-                    <label for="contact" >Contact:</label></br>
-                    <input type="text" name="contact" id="contact" placeholder="Contact.." ><br />
+                    <label for="contact">Contact:</label></br>
+                    <input type="text" name="contact" id="contact" placeholder="Contact.."><br />
                     <div id='contactError' class='error'></div>
 
                 </div>
                 <div class="pass">
-                    <label for="password" >Password:</label></br>
+                    <label for="password">Password:</label></br>
                     <input type="password" name="password" id="password" placeholder="Password.."><br />
                     <div id='passwordError' class='error'></div>
 
@@ -72,7 +109,7 @@
         </section>
     </main>
     <script src='asserts/js/validation_userRegistration.js'>
-        </script>
+    </script>
 </body>
 
 </html>

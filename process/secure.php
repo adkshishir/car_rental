@@ -5,7 +5,7 @@
     }
     else{
         ?>
-        <script>location.replace("index.php");</script>
+        <script>location.replace("/car_rental/index.php");</script>
         <?php
     }
 ?>

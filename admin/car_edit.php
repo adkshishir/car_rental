@@ -1,6 +1,11 @@
+<!-- Car ko bara ma edit garni page  -->
 <?php
     require '../process/db.php';
     // require '../process/secure.php';
+    if(isset($_GET['id'])){
+        $cid=$_GET['id'];
+        $selectcar="SELECT * FROM car WHERE cid='$cid'";
+        $cararr=mysqli_query($connect,$selectcar);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,18 +14,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Register</title>
+    <title>Car Edit</title>
 </head>
 
 <body>
     <header>
-        <!-- <h2>Enter the details of the car:</h2> -->
+        <h2>Enter the details of the car:</h2>
     </header>
     <main>
-        <section class='form-section'>
-       <div>
-       <h2>Enter the details of the car:</h2>
-            <form action="#" method="post" enctype="multipart/form-data" onsubmit='return validationForm_adminAdd()'>
+        <section>
+            <form action="#" method="post" enctype="multipart/form-data">
                 <?php
                 if (isset($_POST['submit'])) {
                     $name = $_POST['name'];
@@ -60,50 +63,41 @@
                 }
                 ?>
                 <div class="name">
-                    <label for="name">Enter the Car name:</label><br/>
-                    <input type="text" name="name" id="name"><br />
-                    <div id='nameError' class='error'></div>
+                    <label for="name">Car name:</label>
+                    <input type="text" name="name" value="<?php echo $cararr['name'];?>" id="name"><br />
                 </div>
                 <div class="photo">
-                    <label for="photo">Upload photo here:</label>
+                    <div class="img">
+                        <img src="../uploads/<?php echo $cararr['photo'];?>" alt="car_image">
+                    </div>
+                    <label for="photo">Edit</label>
                     <input type="file" name="photo" id="photo"><br />
-                    <div id='photoError' class='error'></div>
-
                 </div>
                 <div class="model">
-                    <label for="model">Enter the model:</label><br/>
-                    <input type="text" name="model" id="model"><br />
-                    <div id='modelError' class='error'></div>
-
+                    <label for="model">Car model:</label>
+                    <input type="text" name="model" value="<?php echo $cararr['name'];?>" id="model"><br />
                 </div>
                 <div class="color">
-                    <label for="color">Enter the color:</label>
-                    <input type="text" name="color" id="color"><br />
-                    <div id='colorError' class='error'></div>
-
+                    <label for="color">Color:</label>
+                    <input type="text" name="color" value="<?php echo $cararr['name'];?>" id="color"><br />
                 </div>
                 <div class="price">
-                    <label for="price">Enter the price per day($):</label>
-                    <input type="number" step="0.01" name="price" id="price"><br />
-                    <div id='priceError' class='error'></div>
-
+                    <label for="price">Price per day($):</label>
+                    <input type="number" step="0.01" name="price" value="<?php echo $cararr['name'];?>" id="price"><br />
                 </div>
                 <div class="desc">
                     <label for="description">Enter details:</label>
-                    <input type="text" name="description" id="description"><br />
-                    <div id='descError' class='error'></div>
-
+                    <textarea name="description" id="description" cols="30" rows="10"><?php echo $cararr['description'];?></textarea><br />
                 </div>
                 <div class="submit">
-                    <button type="submit" name="submit" class='button'>Submit</button>
+                    <button type="submit" name="submit">Update</button>
                 </div>
             </form>
-       </div>
         </section>
     </main>
-    <script src='../asserts/js/validation_adminAdd.js'>
-
-    </script>
 </body>
+<?php
+    }
+    ?>
 
 </html>
