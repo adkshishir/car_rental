@@ -19,7 +19,8 @@ require 'process/db.php';
     </header>
     <main>
         <section class='form-section'>
-        <h2>registration Form</h2>
+      <div>
+      <h2>registration Form</h2>
             <form action="#" method="post" onsubmit='return validationForm_userRegistation()'>
                 <?php
                 if (isset($_POST['submit'])) {
@@ -106,6 +107,7 @@ require 'process/db.php';
                 </div>
             </form>
        </div>
+</div>
         </section>
     </main>
     <script src='asserts/js/validation_userRegistration.js'>
