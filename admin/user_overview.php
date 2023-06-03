@@ -1,4 +1,3 @@
-<!-- User ko bara ma herni wala page  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
