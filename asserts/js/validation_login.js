@@ -12,4 +12,33 @@ function validationForm_login() {
     passwordError.textContent = "please enter password";
     return false;
   }
+  login(email, password);
+}
+
+//check usernames and passwords match or not
+function login(username, password) {
+  fetch("login.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      username: username,
+      password: password,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        // Login successful, perform necessary actions
+        console.log("Login successful");
+      } else {
+        // Login failed, display error message
+        alert("login failed email and  password doesnot match");
+        return false;
+      }
+    })
+    .catch((error) => {
+      console.log("Error: " + error);
+    });
 }

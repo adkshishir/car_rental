@@ -59,8 +59,8 @@
                     <div id='nameError' class='error'></div>
                 </div>
                 <div class="photo">
-                    <label for="photo">Upload photo here:</label>
-                    <input type="file" name="photo" id="photo"><br />
+                    <label for="photo">Upload photo here:</label><br />
+                    <input type="file" name="photo" id="photo">
                     <div id='photoError' class='error'></div>
 
                 </div>
@@ -71,20 +71,20 @@
 
                 </div>
                 <div class="color">
-                    <label for="color">Enter the color:</label>
-                    <input type="text" name="color" id="color"><br />
+                    <label for="color">Enter the color:</label><br />
+                    <input type="text" name="color" id="color">
                     <div id='colorError' class='error'></div>
 
                 </div>
                 <div class="price">
-                    <label for="price">Enter the price per day($):</label>
-                    <input type="number" step="0.01" name="price" id="price"><br />
+                    <label for="price">Enter the price per day($):</label><br />
+                    <input type="number" step="0.01" name="price" id="price">
                     <div id='priceError' class='error'></div>
 
                 </div>
                 <div class="desc">
-                    <label for="description">Enter details:</label>
-                    <input type="text" name="description" id="description"><br />
+                    <label for="description">Enter details:</label><br />
+                    <input type="text" name="description" id="description">
                     <div id='descError' class='error'></div>
 
                 </div>

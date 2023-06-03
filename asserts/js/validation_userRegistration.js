@@ -22,6 +22,7 @@ function validationForm_userRegistation() {
     emailError.textContent = "please enter your email ";
     return false;
   }
+  checkUsernameAvilability(email);
   if (contact === "") {
     let contactError = document.getElementById("contactError");
     contactError.textContent = "contact is required";
@@ -39,6 +40,7 @@ function validationForm_userRegistation() {
   }
   if (length(password) <= 3) {
     passwordError.textContent = "password must be at least 4 characters";
+    return false;
   }
   if (length(password) >= 50) {
     passwordError.textContent = "password must be at less than 50 characters";
@@ -48,9 +50,21 @@ function validationForm_userRegistation() {
     conpassError.textContent = "you forget to re enter your password";
     return false;
   }
-
   if (password !== conpassword) {
     conpassError.textContent = "pass is not same ";
     return false;
   }
+}
+function checkUsernameAvilability(username) {
+  fetch("check_username.php?username=" + username)
+    .then((response) => {
+      response.json();
+    })
+    .then((data) => {
+      console.log("user is already registered");
+      return false;
+    })
+    .catch((error) => {
+      console.error("Error" + error.message);
+    });
 }
