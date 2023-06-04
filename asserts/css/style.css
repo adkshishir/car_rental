@@ -11,10 +11,8 @@ body {
 }
 /* header css */
 .main-header {
-  justify-content: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   width: 100vw;
   position: sticky;
@@ -28,7 +26,7 @@ body {
   margin: 0.5rem;
   border-radius: 1rem;
   padding: 0.5rem;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
   background-color: rgb(36, 0, 0);
   color: rgb(104, 104, 255);
@@ -37,12 +35,12 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
-  /* box-shadow: 0 5px 5px #ccc; */
   width: 100%;
 }
 .nav-ul {
   height: 40px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   background-color: white;
 }
@@ -253,10 +251,19 @@ a:hover {
 @media (width<768px) {
   .title {
     font-size: 2rem;
+    width: fit-content;
+    margin: auto;
   }
+
   .main-header {
-    overflow-x: scroll;
-    scrollbar-width: none;
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+  }
+  .main-heder .nav .nav-ul {
+    grid-template-columns: 1fr;
   }
   .main-header::-webkit-scrollbar {
     display: none;
@@ -280,4 +287,33 @@ a:hover {
   form {
     margin: auto;
   }
+}
+/* drop down */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  border: rgb(110, 110, 110) solid 2px;
+  z-index: 1;
+  border-radius: 0.5rem;
+}
+
+.dropdown:hover .dropdown-content {
+  color: black;
+  background-color: #500000;
+  display: grid;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
 }
