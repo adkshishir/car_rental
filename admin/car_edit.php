@@ -44,7 +44,7 @@ if (isset($_GET['id'])) {
       </div>
         </center>
       </header>
-        <main>
+        <main class='admin-main white'>
             <section>
                 <div>
                     <h2>Enter the details of the car:</h2>
@@ -94,18 +94,22 @@ if (isset($_GET['id'])) {
                             }
                         }
                         ?>
+                    <div class='nav'>
+                    <div>
                         <div class="name">
                             <label for="name">Car name:</label><br />
                             <input type="text" name="name" value="<?php echo $cararr['name']; ?>" id="name"><br />
                         </div>
                         <div class="photo">
-                            <div class="img">
-                                <img src="../uploads/<?php echo $cararr['photo']; ?>" alt="car_image">
+                            <div >
+                                <img src="../uploads/<?php echo $cararr['photo']; ?>" alt="car_image" class='img'>
                             </div>
                             <label for="photo">Edit</label><br />
                             <input type="file" name="photo" id="photo"><br />
                         </div>
-                        <div class='nav'>
+                    </div>
+                        <div>
+                
                             <div class="model">
                                 <label for="model">Car model:</label><br />
                                 <input type="text" name="model" value="<?php echo $cararr['model']; ?>" id="model"><br />
@@ -114,7 +118,7 @@ if (isset($_GET['id'])) {
                                 <label for="color">Car Color:</label><br />
                                 <input type="text" name="color" value="<?php echo $cararr['color']; ?>" id="color"><br />
                             </div>
-                        </div>
+                        
                         <div class="price">
                             <label for="price">Price per day($):</label><br />
                             <input type="number" step="0.01" name="price" value="<?php echo $cararr['price']; ?>" id="price"><br />
@@ -126,11 +130,19 @@ if (isset($_GET['id'])) {
                         <div class="submit">
                             <button type="submit" name="submit" class='button button-blue'>Update</button>
                         </div>
+                        </div>
+                    </div>
                     </form>
                 </div>
             </section>
         </main>
    </div>
+   <footer class="footer admin-footer">
+      <div>
+        <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+     
+      </div>
+    </footer>
     </body>
 <?php
 }

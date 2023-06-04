@@ -13,9 +13,41 @@
 </head>
 
 <body>
+<header class='main-header register-header'>
+    <h1 class='title'> Ezy Rental </h1>
+    <nav class="nav nav-bar">
+        <ul class="nav nav-ul nav-sticky">
+          <li class="nav-element">Home</li>
+          <li class="nav-element">About</li>
+          <li class="nav-element">Contact</li>
+          <!-- <li class="nav-element">Home</li> -->
+        </ul>
+      </nav>
+    <div class="dropdown">
+        <button class="button button-green">Profile</button>
+        <div class="dropdown-content">
+          <?php
+          if(isset($_SESSION['email'])){
+            ?>
+            <a class="dropdown-item" href="process/logout.php">Logout</a>
+          <?php
+          }else{
+          ?>
+          <a class="dropdown-item" href="user_login.php">Login</a>
+          <a class="dropdown-item" href="user_register.php">Sign Up</a>
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+
+    </header>
     <header class='main-header'>
-        <center>
-            <h1 class='title'>Ezy Rental</h1>
+        
+    </header>
+    <main >
+    <center>
+            
             <?php
             if(isset($_GET['msg'])){
                 ?>
@@ -24,9 +56,8 @@
             }
             ?>
 </center>
-    </header>
-    <main>
         <section class="car-collection">
+        
        <div>
        <h2>Login Page</h2>
             <form action="#" method="post" onsubmit="return validationForm_login()">
@@ -84,9 +115,23 @@
        </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer class="footer">
+    
+    <div class='left-footer'>
+     <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+     <ul class="">
+       <li>
+         <a href="index.php">Home</a>
+       </li>
+      <li> <a href="about.php"> About</a></li>
+      <li> <a href="contact.php"> Contact</a></li>
+     </ul>
+   </div>
+   <iframe
+     frameborder="0"
+     src="https://www.google.com/maps/embed/v1/place?q=Sydney+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+   ></iframe>
+ </footer>
     <script src='asserts/js/validation_login.js'>
     </script>
 </body>

@@ -5,6 +5,7 @@
     <title>View rental details</title>
 </head>
 <body>
+<div class='admin-body'>
 <header class="admin-header white">
         <center>
           <h1 class="title">Admin Dashboard</h1>
@@ -35,7 +36,7 @@
         </center>
       </header>
     <main class='admin-main white'>
-        <section>
+        <section class='car-collection'>
             <table>
                 <tr>
                     <th>CID</th>
@@ -76,5 +77,12 @@
             </table>
         </section>
     </main>
+</div>
+<footer class="footer admin-footer">
+      <div>
+        <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+     
+      </div>
+    </footer>
 </body>
 </html>

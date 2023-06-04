@@ -12,7 +12,9 @@ body {
 /* header css */
 .main-header {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   position: sticky;
@@ -21,8 +23,16 @@ body {
   background: white;
   z-index: 2;
 }
-.admin-header {
+
+/* .admin-header {
   grid-template-columns: repeat(2, 1fr);
+} */
+header form {
+  box-shadow: none;
+  border: none;
+}
+.register-header {
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .title {
@@ -54,11 +64,13 @@ body {
   background-color: white;
 }
 .nav-element {
-  margin: 0 2rem;
+  margin: 0 1rem;
+  width: fit-content;
 }
 .nav-ul li {
   font-weight: 600;
   font-size: 1.1rem;
+  width: fit-content;
   cursor: pointer;
 }
 .nav-ul li:hover {
@@ -150,6 +162,7 @@ textarea {
   border-radius: 0.3rem;
   margin: 5px;
   border: none;
+  /* max-width: 100%; */
   box-shadow: 0 1px 2px rgb(142, 157, 255);
   border: 2px solid rgb(142, 157, 255);
   padding: 0.3rem 0.5rem;
@@ -180,8 +193,17 @@ input:focus {
   border: none;
   margin: 2px;
 }
-/* .img {
-} */
+.img {
+  width: 700px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(0, 0, 0);
+}
+.label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 .img-small {
   width: 300px;
   height: 200px;
@@ -235,8 +257,8 @@ textarea {
 iframe {
   text-decoration: none;
   overflow: hidden;
-  max-width: 100%;
-  width: 50%;
+  /* max-width: 100%; */
+  width: 100%;
   height: 300px;
   margin: 5px;
   border-radius: 0.5rem;
@@ -255,13 +277,14 @@ a:hover {
 .footer-nav {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 .left-footer {
   width: fit-content;
   margin: auto;
   height: fit-content;
+  text-align: center;
 }
+
 /* about us */
 .about-all {
   max-width: 1300px;
@@ -394,7 +417,7 @@ a:hover {
   .main-header {
     grid-template-columns: 1fr;
     text-align: center;
-    height: 60vh;
+    height: 90vh;
     width: 50vw;
     position: fixed;
     align-items: normal;

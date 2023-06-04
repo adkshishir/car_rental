@@ -7,6 +7,7 @@ include '../include/admin_header.php';
 </head>
 
 <body>
+<div class='admin-body'>
 <header class="admin-header white">
         <center>
           <h1 class="title">Admin Dashboard</h1>
@@ -37,8 +38,8 @@ include '../include/admin_header.php';
         </center>
       </header>
     <main class='admin-main white'>
-        <h3></h3>
-        <section>
+        <h3>Ezy Users</h3>
+        <section class='car-collection'>
             <table>
                 <tr>
                     <th>S.N</th>
@@ -65,6 +66,13 @@ include '../include/admin_header.php';
             </table>
         </section>
     </main>
+</div>
+<footer class="footer admin-footer">
+      <div>
+        <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+     
+      </div>
+    </footer>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
 </head>
 
 <body>
+<div class='admin-body'>
 <header class="admin-header white">
         <center>
           <h1 class="title">Admin Dashboard</h1>
@@ -37,11 +38,12 @@
         </center>
       </header>
     <main class='admin-main white'>
-        <section class='form-section'>
+        <section class='car-collection'>
        <div>
        <h2>Enter the details of the car:</h2>
+      
             <form action="#" method="post" enctype="multipart/form-data" onsubmit='return validationForm_adminAdd()'>
-                <?php
+              <?php
                 if (isset($_POST['submit'])) {
                     $name = addslashes($_POST['name']);
                     $filename = addslashes($_FILES["photo"]['name']);
@@ -81,7 +83,7 @@
                 ?>
                 <div class="name">
                     <label for="name"><span class="error">*</span>Enter the Car name:</label><br/>
-                    <input type="text" name="name" id="name"><br />
+                    <input type="text" name="name" id="name" placeholder='Car name...'><br />
                     <div id='nameError' class='error'></div>
                 </div>
                 <div class="photo">
@@ -92,35 +94,42 @@
                 </div>
                 <div class="model">
                     <label for="model"><span class="error">*</span>Enter the model:</label><br/>
-                    <input type="text" name="model" id="model"><br />
+                    <input type="text" name="model" id="model" placeholder='car model...'><br />
                     <div id='modelError' class='error'></div>
 
                 </div>
                 <div class="color">
                     <label for="color"><span class="error">*</span>Enter the color:</label><br />
-                    <input type="text" name="color" id="color">
+                    <input type="text" name="color" id="color" placeholder='Car color...'>
                     <div id='colorError' class='error'></div>
 
                 </div>
                 <div class="price">
                     <label for="price"><span class="error">*</span>Enter the price per day($):</label><br />
-                    <input type="number" step="0.01" name="price" id="price">
+                    <input type="number" step="0.01" name="price" id="price" placeholder='price/day...'>
                     <div id='priceError' class='error'></div>
 
                 </div>
                 <div class="desc">
                     <label for="description"><span class="error">*</span>Enter details:</label><br />
-                    <input type="text" name="description" id="description">
+                    <input type="text" name="description" id="description" placeholder='description...'>
                     <div id='descError' class='error'></div>
 
                 </div>
                 <div class="submit">
-                    <button type="submit" name="submit" class='button'>Submit</button>
+                    <button type="submit" name="submit" class='button button-blue'>Submit</button>
                 </div>
             </form>
        </div>
         </section>
     </main>
+</div>
+<footer class="footer admin-footer">
+      <div>
+        <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+     
+      </div>
+    </footer>
     <script src='../asserts/js/validation_adminAdd.js'>
 
     </script>

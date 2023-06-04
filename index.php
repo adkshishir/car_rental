@@ -76,13 +76,13 @@ session_start();
           ?>
         <div class="car-detail">
           <h2>Name: <?php echo $cararr['name'];?></h2>
-          <img src="uploads/<?php echo $cararr['photo'];?>" class='img img-small' />
+          <img src="uploads/<?php echo $cararr['photo'];?>" class='img-small' />
           <h3>Model: <?php echo $cararr['model'];?></h3>
-          <div class="nav">
-            <h3>Price per day: $<?php echo $cararr['price'];?></h3>
-            //
-            <h3>Booking status: <?php echo ($cararr['status']=='u')?"Unbook":"Booked";?></h3>
-          </div>
+          
+            <h3>Price/day: $<?php echo $cararr['price'];?></h3>
+          
+            <h3> status: <?php echo ($cararr['status']=='u')?"Unbook":"Booked";?></h3>
+        
           <div>
             <a href="carview.php?id=<?php echo $cararr['cid'];?>"><button class="button button-green">view more</button></a>
             <a href="carbook.php?id=<?php echo $cararr['cid'];?>"><button class="button button-blue">book Now</button></a>
@@ -94,7 +94,7 @@ session_start();
       </section>
     </main>
     <footer class="footer">
-     <center>
+    
        <div class='left-footer'>
         <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
         <ul class="">
@@ -104,7 +104,7 @@ session_start();
          <li> <a href="about.php"> About</a></li>
          <li> <a href="contact.php"> Contact</a></li>
         </ul>
-      </div></center>
+      </div>
       <iframe
         frameborder="0"
         src="https://www.google.com/maps/embed/v1/place?q=Sydney+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"

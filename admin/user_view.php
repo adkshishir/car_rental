@@ -12,6 +12,7 @@
     <title>User view</title>
 </head>
 <body>
+<div class='admin-body'>
 <header class="admin-header white">
         <center>
           <h1 class="title">Admin Dashboard</h1>
@@ -45,7 +46,7 @@
     <main class='admin-main white'>
     <h1>User details
         </h1>
-        <section>
+        <section class='car-collection'>
             <div class="name">
                 <div class="label">Name:</div>
                 <div class="value"><?php echo $usrarr['name'];?></div>
@@ -64,6 +65,7 @@
             </div>
         </section>
     </main>
+</div>
     <?php 
     }
     ?>

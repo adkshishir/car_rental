@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rental view</title>
+    <link rel="stylesheet" href="../asserts/css/style.css"
 </head>
 <body>
+<div class='admin-body'>
 <header class="admin-header white">
         <center>
           <h1 class="title">Admin Dashboard</h1>
@@ -40,7 +42,9 @@
     <main class='admin-main white'>
     <h1>Rental details</h1>
         <section>
-            <div class="">
+         <div class='car-collection'>
+         <div>
+           <div class="">
                 <div class="label">Rented by:</div>
                 <div class="value"></div>
             </div>
@@ -49,6 +53,14 @@
                 <div class="value"></div>
             </div>
             <div class="">
+                <div class="label">Photo:</div>
+                <div class="value">
+                    <img src="../uploads/" alt="car_image" class='img'>
+                </div>
+            </div>
+        </div>
+           <div>
+           <div class="">
                 <div class="label">Car Model number:</div>
                 <div class="value"></div>
             </div>
@@ -56,12 +68,7 @@
                 <div class="label">Car Color:</div>
                 <div class="value"></div>
             </div>
-            <div class="">
-                <div class="label">Photo:</div>
-                <div class="value">
-                    <img src="../uploads/" alt="car_image">
-                </div>
-            </div>
+            
             <div class="">
                 <div class="label">Token:</div>
                 <div class="value">
@@ -87,7 +94,16 @@
                 <div class="label">Total price:</div>
                 <div class="value"></div>
             </div>
+           </div>
+         </div>
         </section>
     </main>
+</div>
+<footer class="footer admin-footer">
+      <div>
+        <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+     
+      </div>
+    </footer>
 </body>
 </html>

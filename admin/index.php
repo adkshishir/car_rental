@@ -116,13 +116,7 @@
     <footer class="footer admin-footer">
       <div>
         <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
-        <!-- <ul class="footer-nav">
-          <li>
-            <a href="index.html">Dashboard</a>
-          </li>
-          <a href="about.html"> Car Register</a>
-          <a href="contact.html"> Contact</a>
-        </ul> -->
+     
       </div>
     </footer>
   </body>
