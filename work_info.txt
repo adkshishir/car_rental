@@ -154,12 +154,15 @@ carbook.php
     => footer ma user ko index ko footer lai include garauni.
 
 
-contact.html 
+contact.php 
     => company ko contact page.
     => Nav bar user ko index lai include garauni.
     => main section ko left side ma halka company ko info. 
     => main section ko right side ma user bata lini form.
     => footer ma user ko index ko footer lai include garauni.
+
+    work status 
+    => Backend work completed.
 
 
 index.html 

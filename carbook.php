@@ -101,6 +101,7 @@ if (isset($_GET['id'])) {
                         $token=rand(10000,99999);
                         $emlarr=explode("@",$_SESSION['email']);
                         $token=$emlarr[0].$token.$_SESSION['id'].$cararr['model'];
+                        $token=str_replace(" ","",$token);
                         $uid=$_SESSION['id'];
                         $insert="INSERT INTO orders(uid,cid,lob,token) VALUES('$uid','$id','$lob','$token')";
                         $insertresult=mysqli_query($connect,$insert);

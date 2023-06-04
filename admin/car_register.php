@@ -17,13 +17,13 @@
             <form action="#" method="post" enctype="multipart/form-data" onsubmit='return validationForm_adminAdd()'>
                 <?php
                 if (isset($_POST['submit'])) {
-                    $name = $_POST['name'];
-                    $filename = $_FILES["photo"]['name'];
-                    $size = $_FILES['photo']['size'];
-                    $model = $_POST['model'];
-                    $color = $_POST['color'];
-                    $price = $_POST['price'];
-                    $desc = $_POST['description'];
+                    $name = addslashes($_POST['name']);
+                    $filename = addslashes($_FILES["photo"]['name']);
+                    $size = addslashes($_FILES['photo']['size']);
+                    $model = addslashes($_POST['model']);
+                    $color = addslashes($_POST['color']);
+                    $price = addslashes($_POST['price']);
+                    $desc = addslashes($_POST['description']);
 
                     $filename = strtolower($filename);
                     $filename = str_replace(" ", "", $filename);
@@ -40,11 +40,11 @@
                             $uploadfile = $filename[0] . "_" . time() . "." . $filename[$n];
                             if (move_uploaded_file($_FILES['photo']['tmp_name'], '../uploads/' . $uploadfile)) {
                                 //sql query goes here.
-                                $insert="INSERT INTO car(name,photo,model,color,price,desc) VALUES('$name','$uploadfile','$model','$color','$price','$desc')";
+                                $insert="INSERT INTO car(name,photo,model,color,price,description) VALUES('$name','$uploadfile','$model','$color','$price','$desc')";
                                 $carresult=mysqli_query($connect,$insert);
                                 if($carresult){
                                     ?>
-                                        <script>loaction.replace("index.php");</script>
+                                        <script>location.replace("index.php");</script>
                                     <?php
                                 }
                             }
