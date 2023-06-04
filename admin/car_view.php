@@ -6,7 +6,8 @@
     if(isset($_GET['id'])){
         $cid=$_GET['id'];
         $selectcar="SELECT * FROM car WHERE cid='$cid'";
-        $cararr=mysqli_query($connect,$selectcar);
+        $carresult=mysqli_query($connect,$selectcar);
+        $cararr=$carresult->fetch_assoc();
 ?>
     <title>View Car</title>
 </head>

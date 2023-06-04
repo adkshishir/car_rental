@@ -31,17 +31,27 @@
                     <th>Photo</th>
                     <th>Action</th>
                 </tr>
+                <?php 
+                    $i=0;
+                    $selectcar="SELECT * FROM car";
+                    $carresult=mysqli_query($connect,$selectcar);
+                    while($carlist=$carresult->fetch_assoc()){
+                ?>
+
                 <tr>
-                    <td>1</td>
-                    <td>BMW</td>
-                    <td>lsjdfw23</td>
-                    <td><a href="../uploads/" target="_blank"><img src="../uploads/" alt="car"></a></td>
+                    <td><?php echo ++$i;?></td>
+                    <td><?php echo $carlist['name'];?></td>
+                    <td><?php echo $carlist['model'];?></td>
+                    <td><a href="../uploads/<?php echo $carlist['photo'];?>" target="_blank"><img src="../uploads/<?php echo $carlist['photo'];?>" alt="car" width="100" height="100"></a></td>
                     <td>
-                        <a href="car_view.php?id=1"><button class='button button-green'>View more</button></a>
-                        <a href="car_edit.php?id=1"><button class='button button-blue'>Edit</button></a>
+                        <a href="car_view.php?id=<?php echo $carlist['cid'];?>"><button class='button button-green'>View more</button></a>
+                        <a href="car_edit.php?id=<?php echo $carlist['cid'];?>"><button class='button button-blue'>Edit</button></a>
                         <a href="http://"><button class='button button-red'>Delete</button></a>
                     </td>
                 </tr>
+                <?php 
+                    }
+                    ?>
                 <tr>
                     <td>1</td>
                     <td>BMW</td>

@@ -3,7 +3,8 @@ admin
         => car haru ko details edit garni page.
 
         work status
-
+        => Backend completed. 
+        => Frontend remaining. 
 
 
     b. car_overview.php
@@ -11,19 +12,22 @@ admin
         => Cars haru table ma dekhauni. 
 
         work status 
-
+        => Pagination remaining
+        => Frontend remaining 
 
     c. car_register.php 
         => cars haru register garni page. 
 
         work status 
-
+        => Backend completed.
+        => Frontend remaining.
 
     d. car_view.php 
         => car ko details herni page. 
 
         work status
-
+        => Backend completed.
+        => Frontend remaining.
 
     e. index.php 
         => admin ko index page. 
