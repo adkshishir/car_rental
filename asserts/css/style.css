@@ -13,12 +13,12 @@ body {
 .main-header {
   justify-content: center;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
-  top: -95px;
-  left: 0;
   position: sticky;
-  position: -webkit-sticky;
+  top: 0;
   box-shadow: 0 5px 5px #ccc;
   background: white;
   z-index: 2;
@@ -45,7 +45,6 @@ body {
   display: flex;
   align-items: center;
   background-color: white;
-  border-top: 2px black solid;
 }
 .nav-element {
   margin: 0 2rem;
@@ -256,7 +255,6 @@ a:hover {
     font-size: 2rem;
   }
   .main-header {
-    top: -65px;
     overflow-x: scroll;
     scrollbar-width: none;
   }
