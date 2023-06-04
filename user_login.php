@@ -13,8 +13,10 @@
 </head>
 
 <body>
-    <header>
-        
+    <header class='main-header'>
+        <center>
+            <h1 class='title'>Ezy Rental</h1>
+</center>
     </header>
     <main>
         <section class="form-section">

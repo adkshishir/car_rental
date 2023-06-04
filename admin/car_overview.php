@@ -30,7 +30,7 @@
     <main>
         <section>
             <h2> 
-             Overview
+             Car Overview
             </h2>
             <table>
                 <tr>
@@ -46,8 +46,8 @@
                     <td>lsjdfw23</td>
                     <td><a href="../uploads/" target="_blank"><img src="../uploads/" alt="car"></a></td>
                     <td>
-                        <a href="car_view.php?id=1"><button>View more</button></a>
-                        <a href="car_edit.php?id=1"><button>Edit</button></a>
+                        <a href="car_view.php?id=1"><button class='button button-green'>View more</button></a>
+                        <a href="car_edit.php?id=1"><button class='button button-blue'>Edit</button></a>
                         <a href="http://"><button class='button button-red'>Delete</button></a>
                     </td>
                 </tr>
