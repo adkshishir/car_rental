@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="asserts/css/style.css" />
   </head>
   <body>
-    <header class="main-header">
+    <button onclick='toggleNav()' class='button btn-circle'>Menu</button>
+    <header class="main-header nav-menu active" id='navMenu' >
       <h1 class="title">Ezy Rentals</h1>
       <div>
         <input type="text" placeholder="Search" /><button
@@ -187,24 +188,6 @@
       <h1 class="car-collection">some category</h1>
       <section class="car-collection">
         <div class="car-detail">
-<<<<<<< HEAD
-          <img src="" />
-          <h2>name</h2>
-          <h3>brand</h3>
-          <h3>price per day</h3>
-        </div>
-        <div class="car-detail">
-          <img src="" />
-          <h2>name</h2>
-          <h3>brand</h3>
-          <h3>price per day</h3>
-        </div>
-        <div class="car-detail">
-          <img src="" />
-          <h2>name</h2>
-          <h3>brand</h3>
-          <h3>price per day</h3>
-=======
           <img src="some image" />
           <h2>name</h2>
           <h3>model</h3>
@@ -245,19 +228,11 @@
             <button class="button button-green">view more</button>
             <button class="button button-blue">book Now</button>
           </div>
->>>>>>> 074db59bcd71a8a2cfecbb12091631280cde24d3
         </div>
       </section>
     </main>
     <footer class="footer">
       <div>
-<<<<<<< HEAD
-        <nav class="footer-nav">
-          <a href="www.facebook.com">facebook</a>
-          <a href="www.youtube.com"> youtube</a>
-          <a href="www.insgram.com"> instagram</a>
-        </nav>
-=======
         <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
         <ul class="footer-nav">
           <li>
@@ -266,12 +241,12 @@
           <a href="about.html"> About</a>
           <a href="contact.html"> Contact</a>
         </ul>
->>>>>>> 074db59bcd71a8a2cfecbb12091631280cde24d3
       </div>
       <iframe
         frameborder="0"
         src="https://www.google.com/maps/embed/v1/place?q=Sydney+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
       ></iframe>
     </footer>
+    <script src='asserts/js/toggleNav.js'> </script>
   </body>
 </html>
