@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="asserts/css/style.css" />
   </head>
   <body>
-    <header class="main-header">
+    <button onclick='toggleNav()' class='button btn-circle'>Menu</button>
+    <header class="main-header nav-menu active" id='navMenu' >
       <h1 class="title">Ezy Rentals</h1>
       <div>
         <input type="text" placeholder="Search" /><button
@@ -246,5 +247,6 @@
         src="https://www.google.com/maps/embed/v1/place?q=Sydney+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
       ></iframe>
     </footer>
+    <script src='asserts/js/toggleNav.js'> </script>
   </body>
 </html>
