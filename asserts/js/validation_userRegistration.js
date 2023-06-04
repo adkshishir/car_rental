@@ -37,30 +37,33 @@ function validationForm_userRegistation() {
 
   if (password === "") {
     passwordError.textContent = "you forget to enter your password";
+    event.preventDefault();
     return false;
   }
   if (length(password) <= 3) {
     passwordError.textContent = "password must be at least 4 characters";
+    event.preventDefault();
     return false;
   }
   if (length(password) >= 50) {
     passwordError.textContent = "password must be at less than 50 characters";
+
     return false;
   }
   if (conpassword === "") {
     conpassError.textContent = "you forget to re enter your password";
+    event.preventDefault();
     return false;
   }
   if (password !== conpassword) {
     conpassError.textContent = "pass is not same ";
     return false;
   }
+  return true;
 }
 function checkUsernameAvilability(username) {
   fetch("check_username.php?username=" + username)
-    .then((response) => {
-      response.json();
-    })
+    .then((response) => response.json())
     .then((data) => {
       console.log("user is already registered");
       return false;

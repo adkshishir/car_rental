@@ -99,13 +99,13 @@ include 'include/header.php';
             </div>
                 <div class="pass">
                     <label for="password"><span class="error">*</span>Password:</label></br>
-                    <input type="password" name="password" id="password" placeholder="Password.."><br />
+                    <input type="password" name="password" id="password" placeholder="Password.." require><br />
                     <div id='passwordError' class='error'></div>
 
                 </div>
                 <div class="conpass">
                     <label for="conpass"><span class="error">*</span>Confirm Password:</label></br>
-                    <input type="password" name="conpass" id="conpass" placeholder="Confirm">
+                    <input type="password" name="conpass" id="conpass" placeholder="Confirm" require>
                     <div id='conpassError' class='error'></div>
 
                 </div>
