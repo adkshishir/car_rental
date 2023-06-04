@@ -1,4 +1,5 @@
 <?php
+include 'include/header.php';
 require 'process/db.php';
 ?>
 <!DOCTYPE html>
@@ -8,14 +9,15 @@ require 'process/db.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
     <link rel="stylesheet" href="asserts/css/style.css" />
-
+    <title>Register</title>
 </head>
 
 <body>
-    <header>
-
+    <header class='main-header'>
+<center>
+    <h1 class='title'> Ezy Rental </h1>
+</center>
     </header>
     <main>
         <section class='form-section'>
@@ -103,7 +105,7 @@ require 'process/db.php';
 
                 </div>
                 <div class="submit">
-                    <button type="submit" name="submit" class="button">Submit</button>
+                    <button type="submit" name="submit" class="button button-blue">Submit</button>
                 </div>
             </form>
        </div>

@@ -22,14 +22,14 @@ include '../include/admin_header.php';
                     <td>1</td>
                     <td>Ram</td>
                     <td>ram@gmail.com</td>
-                    <td><a href="user_view.php?id=1"><button>View more</button></a>
+                    <td><a href="user_view.php?id=1"><button class='button button-green'>View more</button></a>
                     </td>
                 </tr>
                 <tr>
                     <td>1</td>
                     <td>Ram</td>
                     <td>ram@gmail.com</td>
-                    <td><a href=""><button>View more</button></a>
+                    <td><a href=""><button class='button button-green'>View more</button></a>
                     </td>
                 </tr>
             </table>

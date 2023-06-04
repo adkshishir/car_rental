@@ -32,8 +32,8 @@
                     <td>20308430284203480</td>
                     <td>2094332</td>
                     <td>
-                        <a href="http://"><button>View more</button></a>
-                        <a href="http://"><button>Delete</button></a>
+                        <a href="http://"><button class='button button-green'>View more</button></a>
+                        <a href="http://"><button class='button button-red'>Delete</button></a>
                     </td>
                 </tr>
                 <tr>
@@ -45,8 +45,8 @@
                     <td>208340284023423</td>
                     <td>2094332</td>
                     <td>
-                        <a href="http://"><button>View more</button></a>
-                        <a href="http://"><button>Delete</button></a>
+                    <a href="http://"><button class='button button-green'>View more</button></a>
+                        <a href="http://"><button class='button button-red'>Delete</button></a>
                     </td>
                 </tr>
             </table>

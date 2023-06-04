@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
 body {
   overflow-x: hidden;
 }
@@ -24,8 +25,9 @@ body {
 }
 
 .title {
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 1rem;
+  padding: 0.5rem;
   font-size: 4rem;
   font-weight: 600;
   background-color: rgb(36, 0, 0);
@@ -82,7 +84,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0.419);
 }
 .car-detail:hover {
-  box-shadow: 3px 3px 3px rgba(255, 206, 206, 0.764);
+  box-shadow: 0 0 5px rgba(255, 155, 155, 0.764);
 }
 /*  tables 
  */
@@ -104,6 +106,7 @@ th {
   padding: 2px;
   font-weight: 600;
   background: rgb(177, 0, 0);
+
   color: rgb(255, 255, 255);
 }
 tr:nth-child(even) {
@@ -128,7 +131,7 @@ form {
 }
 .form-section {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -163,20 +166,39 @@ input:focus {
   padding: 5px;
   margin: auto;
   font-size: 1.3rem;
-  background-color: rgb(65, 65, 255);
   color: white;
   border-radius: 0.5rem;
   outline: solid 3px rgba(118, 118, 118, 0.775);
   border: none;
+  margin: 2px;
 }
+
 .button:hover {
-  background-color: rgb(52, 52, 255);
-  outline: solid 3px blue;
   cursor: pointer;
+}
+.button-green {
+  background-color: rgb(58, 255, 58);
+}
+.button-green:hover {
+  background-color: rgb(64, 255, 64);
+  outline: rgb(34, 97, 0) solid 3px;
+}
+.button-blue {
+  background-color: rgb(52, 52, 255);
+}
+.button-blue:hover {
+  background-color: rgb(65, 65, 255);
+  outline: solid 3px rgb(0, 0, 138);
+}
+.button-red {
+  background-color: rgb(255, 121, 121);
+}
+.button-red:hover {
+  background-color: rgb(255, 64, 64);
+  outline: rgb(160, 0, 0) solid 3px;
 }
 textarea {
   width: 100%;
-  border: none;
 }
 
 /* footer */
@@ -186,6 +208,8 @@ textarea {
   background-color: black;
   position: sticky;
   top: -80vh;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.5rem;
 }
 iframe {
   text-decoration: none;
@@ -194,6 +218,7 @@ iframe {
   width: 50%;
   height: 300px;
   margin: 5px;
+  border-radius: 0.5rem;
 }
 a {
   text-decoration: none;
@@ -224,4 +249,37 @@ a:hover {
   margin: 3px;
   padding: 5px;
   background-color: rgb(255, 219, 219);
+}
+
+@media (width<768px) {
+  .title {
+    font-size: 2rem;
+  }
+  .main-header {
+    top: -65px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+  .main-header::-webkit-scrollbar {
+    display: none;
+  }
+  .footer {
+    display: grid;
+    justify-content: center;
+  }
+  iframe {
+    width: 100%;
+  }
+  .footer-nav {
+    display: grid;
+    justify-content: center;
+    margin: 8px auto;
+  }
+  .form-section {
+    display: grid;
+    justify-content: center;
+  }
+  form {
+    margin: auto;
+  }
 }
