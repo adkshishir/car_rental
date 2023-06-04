@@ -5,5 +5,5 @@ unset($_SESSION['id']);
 unset($_SESSION['role']);
 ?>
 <script>
-    location.replace("user_login.php?msg=Logout successfully");
+    location.replace("../user_login.php?msg=Logout successfully");
 </script>

@@ -111,7 +111,7 @@ if (isset($_GET['id'])) {
                 }
             ?>
             <div>
-                <label for="lob">Enter length of booking(days):</label>
+                <label for="lob"><span class="error">*</span>Enter length of booking(days):</label>
                 <input type="number" name="lob" id="lob">
             </div>
             <div>

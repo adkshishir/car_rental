@@ -72,36 +72,36 @@ require 'process/db.php';
                 }
                 ?>
                 <div class="name">
-                    <label for="name">Name:</label></br>
+                    <label for="name"><span class="error">*</span>Name:</label></br>
                     <input type="text" name="name" id="name" placeholder="Name.."><br />
                     <div id='nameError' class='error'></div>
                 </div>
                 <div class="email">
-                    <label for="email">Email:</label></br>
+                    <label for="email"><span class="error">*</span>Email:</label></br>
                     <input type="email" name="email" id="email" placeholder="Email.."><br />
                     <div id='emailError' class='error'></div>
 
                 </div>
                 <div class="address">
-                    <label for="address">Address:</label></br>
+                    <label for="address"><span class="error">*</span>Address:</label></br>
                     <input type="text" name="address" id="address" placeholder="Address"><br />
                     <div id='addressError' class='error'></div>
 
                 </div>
                 <div class="contact">
-                    <label for="contact">Contact:</label></br>
+                    <label for="contact"><span class="error">*</span>Contact:</label></br>
                     <input type="text" name="contact" id="contact" placeholder="Contact.."><br />
                     <div id='contactError' class='error'></div>
 
                 </div>
                 <div class="pass">
-                    <label for="password">Password:</label></br>
+                    <label for="password"><span class="error">*</span>Password:</label></br>
                     <input type="password" name="password" id="password" placeholder="Password.."><br />
                     <div id='passwordError' class='error'></div>
 
                 </div>
                 <div class="conpass">
-                    <label for="conpass">Confirm Password:</label></br>
+                    <label for="conpass"><span class="error">*</span>Confirm Password:</label></br>
                     <input type="password" name="conpass" id="conpass" placeholder="Confirm">
                     <div id='conpassError' class='error'></div>
 

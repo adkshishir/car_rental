@@ -1,4 +1,5 @@
 <?php 
+session_start();
   require 'process/db.php';
 ?>
 <!DOCTYPE html>
@@ -35,7 +36,7 @@
         <button class="button button-green">Profile</button>
         <div class="dropdown-content">
           <?php
-          if(isset($_SESSION['id'])){
+          if(isset($_SESSION['email'])){
             ?>
             <a class="dropdown-item" href="process/logout.php">Logout</a>
           <?php
@@ -62,8 +63,8 @@
             <h3>boooked indicator</h3>
           </div>
           <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
+            <a href="carview.php?id=1"><button class="button button-green">view more</button></a>
+            <a href="carbook.php?id=1"><button class="button button-blue">book Now</button></a>
           </div>
         </div>
         <div class="car-detail">
