@@ -1,7 +1,7 @@
 <?php
     include '../include/admin_header.php';
     require '../process/db.php';
-    // require '../process/admin_secure.php';
+    require '../process/admin_secure.php';
 ?>
     <title>Car Register</title>
 </head>
