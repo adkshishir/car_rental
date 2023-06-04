@@ -29,7 +29,7 @@
         <section class="car-collection">
        <div>
        <h2>Login Page</h2>
-            <form action="#" method="post" onsubmit='return validationForm_login()'>
+            <form action="#" method="post" onsubmit="return validationForm_login()">
                 <?php
                 if (isset($_POST['submit'])) {
                     $email = $_POST['username'];
@@ -65,7 +65,7 @@
                     <label for="email">Enter your email:
                     </label><br/>
                     <input type="text" name="username" id="email" placeholder="Email...">
-                    <div id='usernameError' class='error'></div>
+                    <div id='emailError' class='error'></div>
                     
                 </div>
                 <div class="pass">
@@ -74,7 +74,7 @@
                     <div id='passwordError' class='error'></div>
                 </div>
                 <div class="submit">
-                    <button type="submit" name="submit">Submit</button>
+                    <button type="submit" name="submit" class='button button-blue'>Submit</button>
                 </div>
             </form>
             <div class="link">
