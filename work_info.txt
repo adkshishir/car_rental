@@ -54,12 +54,15 @@ admin
         => users haru ko overview herni page. Tables ma.
 
         work status 
-
+        =>pagination remaining.
+        =>frontend remaining.
 
     i. user_view.php 
         => user ko details herni page. 
 
         work status 
+        =>backend completed. 
+        =>frontend remaining. 
 
 
 asserts

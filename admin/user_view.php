@@ -1,10 +1,14 @@
 <!-- User ko bara ma herni wala page  -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+    include '../include/admin_header.php';
+    require '../process/db.php';
+    require '../process/admin_secure.php';
+    if(isset($_GET['id'])){
+        $uid=$_GET['id'];
+        $selectusr="SELECT * FROM users WHERE uid='$uid'";
+        $usrresult=mysqli_query($connect,$selectusr);
+        $usrarr=$usrresult->fetch_assoc();
+?>
     <title>User view</title>
 </head>
 <body>
@@ -16,21 +20,24 @@
         <section>
             <div class="name">
                 <div class="label">Name:</div>
-                <div class="value"></div>
+                <div class="value"><?php echo $usrarr['name'];?></div>
             </div>
             <div class="email">
                 <div class="label">Email:</div>
-                <div class="value"></div>
+                <div class="value"><?php echo $usrarr['email'];?></div>
             </div>
             <div class="contact">
                 <div class="label">Contact:</div>
-                <div class="value"></div>
+                <div class="value"><?php echo $usrarr['contact'];?></div>
             </div>
             <div class="address">
                 <div class="label">Address:</div>
-                <div class="value"></div>
+                <div class="value"><?php echo $usrarr['address'];?></div>
             </div>
         </section>
     </main>
+    <?php 
+    }
+    ?>
 </body>
 </html>

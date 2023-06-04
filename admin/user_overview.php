@@ -1,4 +1,6 @@
 <?php
+require 'process/db.php';
+require 'process/admin_secure.php';
 include '../include/admin_header.php';
 ?>
 <title>User Overview</title>
@@ -18,20 +20,22 @@ include '../include/admin_header.php';
                     <th>Email</th>
                     <th>Action</th>
                 </tr>
+                <?php 
+                    $i=0;
+                    $selectusr="SELECT * FROM users";
+                    $usrresult=mysqli_query($connect,$selectusr);
+                    while($usrarr=$usrresult->fetch_assoc()){
+                ?>
                 <tr>
-                    <td>1</td>
-                    <td>Ram</td>
-                    <td>ram@gmail.com</td>
-                    <td><a href="user_view.php?id=1"><button class='button button-green'>View more</button></a>
+                    <td><?php echo ++$i; ?></td>
+                    <td><?php echo $usrarr['name'];?></td>
+                    <td><?php echo $usrarr['email'];?></td>
+                    <td><a href="user_view.php?id=<?php echo $usrarr['id'];?>"><button class='button button-green'>View more</button></a>
                     </td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Ram</td>
-                    <td>ram@gmail.com</td>
-                    <td><a href=""><button class='button button-green'>View more</button></a>
-                    </td>
-                </tr>
+                <?php 
+                    }
+                    ?>
             </table>
         </section>
     </main>
