@@ -1,4 +1,6 @@
 <?php
+require '../process/admin_secure.php';
+require '../process/db.php';
  include '../include/admin_header.php';
 ?>
     <title>Admin Dashboard</title>
