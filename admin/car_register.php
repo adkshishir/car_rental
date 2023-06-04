@@ -54,36 +54,36 @@
                 }
                 ?>
                 <div class="name">
-                    <label for="name">Enter the Car name:</label><br/>
+                    <label for="name"><span class="error">*</span>Enter the Car name:</label><br/>
                     <input type="text" name="name" id="name"><br />
                     <div id='nameError' class='error'></div>
                 </div>
                 <div class="photo">
-                    <label for="photo">Upload photo here:</label><br />
+                    <label for="photo"><span class="error">*</span>Upload photo here:</label><br />
                     <input type="file" name="photo" id="photo">
                     <div id='photoError' class='error'></div>
 
                 </div>
                 <div class="model">
-                    <label for="model">Enter the model:</label><br/>
+                    <label for="model"><span class="error">*</span>Enter the model:</label><br/>
                     <input type="text" name="model" id="model"><br />
                     <div id='modelError' class='error'></div>
 
                 </div>
                 <div class="color">
-                    <label for="color">Enter the color:</label><br />
+                    <label for="color"><span class="error">*</span>Enter the color:</label><br />
                     <input type="text" name="color" id="color">
                     <div id='colorError' class='error'></div>
 
                 </div>
                 <div class="price">
-                    <label for="price">Enter the price per day($):</label><br />
+                    <label for="price"><span class="error">*</span>Enter the price per day($):</label><br />
                     <input type="number" step="0.01" name="price" id="price">
                     <div id='priceError' class='error'></div>
 
                 </div>
                 <div class="desc">
-                    <label for="description">Enter details:</label><br />
+                    <label for="description"><span class="error">*</span>Enter details:</label><br />
                     <input type="text" name="description" id="description">
                     <div id='descError' class='error'></div>
 

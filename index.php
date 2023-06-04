@@ -1,3 +1,7 @@
+<?php 
+session_start();
+  require 'process/db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,9 +35,18 @@
       <div class="dropdown">
         <button class="button button-green">Profile</button>
         <div class="dropdown-content">
-          <a class="dropdown-item" href="#">Login</a>
-          <a class="dropdown-item" href="#">Sign Up</a>
-          <a class="dropdown-item" href="#">Logout</a>
+          <?php
+          if(isset($_SESSION['email'])){
+            ?>
+            <a class="dropdown-item" href="process/logout.php">Logout</a>
+          <?php
+          }else{
+          ?>
+          <a class="dropdown-item" href="user_login.php">Login</a>
+          <a class="dropdown-item" href="user_register.php">Sign Up</a>
+          <?php
+          }
+          ?>
         </div>
       </div>
     </header>
@@ -50,8 +63,8 @@
             <h3>boooked indicator</h3>
           </div>
           <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
+            <a href="carview.php?id=1"><button class="button button-green">view more</button></a>
+            <a href="carbook.php?id=1"><button class="button button-blue">book Now</button></a>
           </div>
         </div>
         <div class="car-detail">

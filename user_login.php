@@ -16,6 +16,13 @@
     <header class='main-header'>
         <center>
             <h1 class='title'>Ezy Rental</h1>
+            <?php
+            if(isset($_GET['msg'])){
+                ?>
+            <div class="msg"><?php echo $_GET['msg'];?></div>
+            <?php
+            }
+            ?>
 </center>
     </header>
     <main>
@@ -25,7 +32,7 @@
             <form action="#" method="post" onsubmit='return validationForm_login()'>
                 <?php
                 if (isset($_POST['submit'])) {
-                    $usrname = $_POST['username'];
+                    $email = $_POST['username'];
                     $password = $_POST['password'];
                     $password = md5($password);
                     $emailCheck = "SELECT * FROM users WHERE email='$email' AND password='$password'";
@@ -66,7 +73,14 @@
                     <input type="password" name="password" id="password" placeholder="password...">
                     <div id='passwordError' class='error'></div>
                 </div>
+                <div class="submit">
+                    <button type="submit" name="submit">Submit</button>
+                </div>
             </form>
+            <div class="link">
+                <div>Don't have account: <a href="user_register.php">create new</a>
+                </div>
+            </div>
        </div>
         </section>
     </main>

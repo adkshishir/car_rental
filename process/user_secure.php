@@ -5,7 +5,7 @@
     }
     else{
         ?>
-        <script>location.replace("/car_rental/user_login.php");</script>
+        <script>location.replace("/car_rental/user_login.php?msg=You must have to login first.");</script>
         <?php
     }
 ?>

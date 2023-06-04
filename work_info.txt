@@ -179,11 +179,15 @@ index.php
 user_login.php 
     => login page. 
 
+    work status 
+    => Backend completed. 
+
 
 user_register.php
     => register page. 
 
     work status
+    => Backend completed.
 
 
 
