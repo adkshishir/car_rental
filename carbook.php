@@ -3,10 +3,10 @@ require 'process/user_secure.php';
 require 'process/db.php';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $selectcar="SELECT * FROM car WHERE cid='$cid'";
-    $cararr=mysqli_query($connect,$selectcar);
-
-    $insertresult=0;
+    $selectcar="SELECT * FROM car WHERE cid=$id";
+    $carresult=mysqli_query($connect,$selectcar);
+    $cararr=$carresult->fetch_assoc();
+    $print=0;
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -24,7 +24,7 @@ if (isset($_GET['id'])) {
 </header>
 <main>
     <?php
-    if($insertresult){
+    if(($print)){
         ?>
     <section class="print">
         <!-- yo user lai download garna dini wala file ho hai. -->
@@ -74,7 +74,7 @@ if (isset($_GET['id'])) {
         </div>
         <div class="photo">
             <div class="label">Car Photo:</div>
-            <div class="value"><img src="<?php echo $cararr['photo'];?>" alt="car_photo"></div>
+            <div class="value"><img src="uploads/<?php echo $cararr['photo'];?>" alt="car_photo"></div>
         </div>
         <div class="model">
             <div class="label">Car model:</div>
@@ -105,8 +105,8 @@ if (isset($_GET['id'])) {
                         $uid=$_SESSION['id'];
                         $insert="INSERT INTO orders(uid,cid,lob,token) VALUES('$uid','$id','$lob','$token')";
                         $insertresult=mysqli_query($connect,$insert);
-                        if(!($insertresult)){
-                                echo "Try again.";
+                        if(($insertresult)){
+                                $print=1;
                         }
                     }
                 }
@@ -116,7 +116,7 @@ if (isset($_GET['id'])) {
                 <input type="number" name="lob" id="lob">
             </div>
             <div>
-                <button type="submit" name="submit"></button>
+                <button type="submit" name="submit">Book</button>
             </div>
         </form>
     </section>

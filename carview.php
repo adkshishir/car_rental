@@ -1,10 +1,11 @@
 <!-- Car ko description herni wala page  -->
 <?php
-    require '../process/db.php';
+    require 'process/db.php';
     if(isset($_GET['id'])){
         $cid=$_GET['id'];
         $selectcar="SELECT * FROM car WHERE cid='$cid'";
-        $cararr=mysqli_query($connect,$selectcar);
+        $carresult=mysqli_query($connect,$selectcar);
+        $cararr=$carresult->fetch_assoc();
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -28,7 +29,7 @@
 
             <div class="name">
                 <div class="label">Photo: </div>
-                <div class="value"><img src="../uploads/<?php echo $cararr['photo'];?>" alt="car_image"></div>
+                <div class="value"><img src="uploads/<?php echo $cararr['photo'];?>" alt="car_image"></div>
             </div>
 
             <div class="name">
