@@ -1,6 +1,7 @@
 <?php 
 session_start();
   require 'process/db.php';
+  $sstatus=0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,14 +17,22 @@ session_start();
     <button onclick='toggleNav()' class='button btn-circle'>Menu</button>
     <header class="main-header nav-menu active" id='navMenu' >
       <h1 class="title">Ezy Rentals</h1>
+      <form action="#" method="post">
+        <?php
+            if(isset($_POST['submit'])){
+              $search=$_POST['search'];
+              if(!empty($search)){
+                $sstatus=1;
+              }
+            }
+        ?>
       <div class='search-box'>
-        <input type="text" placeholder="Search" />
-        <button
-          class="button button-blue"
-        >
+        <input type="text" name="search" placeholder="Search" />
+        <button class="button button-blue" type="submit" name="submit">
           Search
         </button>
       </div>
+      </form>
       <nav class="nav nav-bar">
         <ul class="nav nav-ul nav-sticky">
           <li class="nav-element">Home</li>
@@ -51,198 +60,37 @@ session_start();
       </div>
     </header>
     <main class="main">
+      <?php
+        if(!$sstatus){
+          $select="SELECT * FROM car";
+          
+        }else{
+          $select="SELECT * FROM car WHERE name LIKE '%$search%'";
+        }
+        ?>
       <h1 class="car-collection">some category</h1>
       <section class="car-collection">
+        <?php 
+        $selectresult=mysqli_query($connect,$select);
+        while($cararr=$selectresult->fetch_assoc()){
+          ?>
         <div class="car-detail">
-          <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
+          <h2>Name: <?php echo $cararr['name'];?></h2>
+          <img src="uploads/<?php echo $cararr['photo'];?>" class='img img-small' />
+          <h3>Model: <?php echo $cararr['model'];?></h3>
           <div class="nav">
-            <h3>price per day</h3>
+            <h3>Price per day: $<?php echo $cararr['price'];?></h3>
             //
-            <h3>boooked indicator</h3>
+            <h3>Booking status: <?php echo ($cararr['status']=='u')?"Unbook":"Booked";?></h3>
           </div>
           <div>
-            <a href="carview.php?id=1"><button class="button button-green">view more</button></a>
-            <a href="carbook.php?id=1"><button class="button button-blue">book Now</button></a>
+            <a href="carview.php?id=<?php echo $cararr['cid'];?>"><button class="button button-green">view more</button></a>
+            <a href="carbook.php?id=<?php echo $cararr['cid'];?>"><button class="button button-blue">book Now</button></a>
           </div>
         </div>
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-      </section>
-      <h1 class="car-collection">some category</h1>
-      <section class="car-collection">
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-        <div class="car-detail">
-          <img src="some image" />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-        <div class="car-detail">
-          <img src="some image" />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-      </section>
-      <section></section>
-      <h1 class="car-collection">some category</h1>
-      <section class="car-collection">
-        <div class="car-detail">
-          <img src="some image" />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
-        <div class="car-detail">
-        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
-          <h2>name</h2>
-          <h3>model</h3>
-          <div class="nav">
-            <h3>price per day</h3>
-            //
-            <h3>boooked indicator</h3>
-          </div>
-          <div>
-            <button class="button button-green">view more</button>
-            <button class="button button-blue">book Now</button>
-          </div>
-        </div>
+        <?php 
+        }
+        ?>
       </section>
     </main>
     <footer class="footer">

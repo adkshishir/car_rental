@@ -1,6 +1,6 @@
 <?php
-require 'process/db.php';
-require 'process/admin_secure.php';
+require '../process/db.php';
+require '../process/admin_secure.php';
 include '../include/admin_header.php';
 ?>
 <title>User Overview</title>
@@ -56,7 +56,7 @@ include '../include/admin_header.php';
                     <td><?php echo ++$i; ?></td>
                     <td><?php echo $usrarr['name'];?></td>
                     <td><?php echo $usrarr['email'];?></td>
-                    <td><a href="user_view.php?id=<?php echo $usrarr['id'];?>"><button class='button button-green'>View more</button></a>
+                    <td><a href="user_view.php?id=<?php echo $usrarr['uid'];?>"><button class='button button-green'>View more</button></a>
                     </td>
                 </tr>
                 <?php 
