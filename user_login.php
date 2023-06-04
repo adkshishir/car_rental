@@ -16,6 +16,13 @@
     <header class='main-header'>
         <center>
             <h1 class='title'>Ezy Rental</h1>
+            <?php
+            if(isset($_GET['msg'])){
+                ?>
+            <div class="msg"><?php echo $_GET['msg'];?></div>
+            <?php
+            }
+            ?>
 </center>
     </header>
     <main>
@@ -67,6 +74,10 @@
                     <div id='passwordError' class='error'></div>
                 </div>
             </form>
+            <div class="link">
+                <div>Don't have account: <a href="user_register.php">create new</a>
+                </div>
+            </div>
        </div>
         </section>
     </main>

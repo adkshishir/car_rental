@@ -36,16 +36,18 @@ require 'process/db.php';
                     #email checking starts here
                     $emailcount = 0;
                     if (!empty($email)) {
+                        echo "email check ma aya.";
                         $select = "SELECT email FROM users where email='$email'";
                         $emailcheck = mysqli_query($connect, $select);
                         $emailcount = mysqli_num_rows($emailcheck);
                         if ($emailcount != 0) {
-                            $emailmsg = "* Email already exists in database";
+                            echo "* Email already exists in database";
                         }
                     }
                     #email checking ends here
 
-                    if ((!empty($name)) && (!empty($email)) && (!empty($contact)) && (!empty($address)) && (strlen($password) > 4) && ($password == $conpass) && ($emailcount == 0)) {
+                    if ((!empty($name)) && (!empty($email)) && (!empty($contact)) && (!empty($address)) && (strlen($password) >= 4) && ($password == $conpass) && ($emailcount == 0)) {
+                        echo "Insertion ma aya";
                         $password = md5($password);
                         $insert = "INSERT INTO users (name,email,contact,address,password) VALUES('$name','$email','$contact','$address','$password')";
                         $result = mysqli_query($connect, $insert);
@@ -108,6 +110,10 @@ require 'process/db.php';
                     <button type="submit" name="submit" class="button button-blue">Submit</button>
                 </div>
             </form>
+            <div class="link">
+                <div>Already have account: <a href="user_register.php">Login</a>
+                </div>
+            </div>
        </div>
 </div>
         </section>
