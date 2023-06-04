@@ -244,6 +244,9 @@ a {
   text-decoration: none;
   color: white;
 }
+.link div a {
+  color: blue;
+}
 a:hover {
   text-decoration: underline;
   color: rgb(146, 146, 255);
