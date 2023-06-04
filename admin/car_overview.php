@@ -1,6 +1,6 @@
 <?php
     include '../include/admin_header.php';
-    require '../process/db.php';
+    // require '../process/db.php';
 ?>
 <!-- <!DOCTYPE html>
 <html lang="en">
@@ -15,21 +15,20 @@
     
 </head>
 <body>
-<header class="main-header">
-      <center>
-        <h1 class="title">Admin Dashboard</h1>
-
-        <nav class="nav nav-bar">
-          <ul class="nav nav-ul nav-sticky">
-            <li class="nav-element">Dashboard</li>
-            <li class="nav-element">Car register</li>
-          </ul>
-        </nav>
-      </center>
+<header class='main-header admin-header'>
+    <h1 class='title'> Ezy Rental </h1>
+    <nav class="nav nav-bar">
+        <ul class="nav nav-ul nav-sticky">
+          <li class="nav-element">Dashboard</li>
+          <li class="nav-element">Car Register</li>
+         
+        </ul>
+      </nav>
     </header>
-    <main>
-        <section>
-            <h2> 
+    <main >
+        <section class='form-section' >
+           <div class=''>
+           <h2> 
              Car Overview
             </h2>
             <table>
@@ -62,7 +61,7 @@
                         <a href="http://"><button class='button button-red'>Delete</button></a>
                     </td>
                 </tr>
-            </table>
+            </table></div>
         </section>
     </main>
 </body>

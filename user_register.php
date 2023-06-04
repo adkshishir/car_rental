@@ -1,6 +1,6 @@
 <?php
 include 'include/header.php';
-require 'process/db.php';
+// require 'process/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +20,11 @@ require 'process/db.php';
 </center>
     </header>
     <main>
-        <section class='form-section'>
-      <div>
+        <section  class='car-collection'>
+      <div >
       <h2>registration Form</h2>
             <form action="#" method="post" onsubmit='return validationForm_userRegistation()'>
+            
                 <?php
                 if (isset($_POST['submit'])) {
                     $name = $_POST['name'];
@@ -80,7 +81,8 @@ require 'process/db.php';
                     <div id='emailError' class='error'></div>
 
                 </div>
-                <div class="address">
+               <div >
+               <div class="address">
                     <label for="address">Address:</label></br>
                     <input type="text" name="address" id="address" placeholder="Address"><br />
                     <div id='addressError' class='error'></div>
@@ -92,6 +94,7 @@ require 'process/db.php';
                     <div id='contactError' class='error'></div>
 
                 </div>
+            </div>
                 <div class="pass">
                     <label for="password">Password:</label></br>
                     <input type="password" name="password" id="password" placeholder="Password.."><br />

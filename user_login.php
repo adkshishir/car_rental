@@ -19,7 +19,7 @@
 </center>
     </header>
     <main>
-        <section class="form-section">
+        <section class="car-collection">
        <div>
        <h2>Login Page</h2>
             <form action="#" method="post" onsubmit='return validationForm_login()'>
