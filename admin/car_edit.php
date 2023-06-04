@@ -2,7 +2,7 @@
 <?php
     include '../include/admin_header.php';
     require '../process/db.php';
-    // require '../process/secure.php';
+    // require '../process/admin_secure.php';
     if(isset($_GET['id'])){
         $cid=$_GET['id'];
         $selectcar="SELECT * FROM car WHERE cid='$cid'";

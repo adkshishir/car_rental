@@ -1,0 +1,185 @@
+admin 
+    a. car_edit.php
+        => car haru ko details edit garni page.
+
+        work status
+
+
+
+    b. car_overview.php
+        => cars haru ko overview herni page.
+        => Cars haru table ma dekhauni. 
+
+        work status 
+
+
+    c. car_register.php 
+        => cars haru register garni page. 
+
+        work status 
+
+
+    d. car_view.php 
+        => car ko details herni page. 
+
+        work status
+
+
+    e. index.php 
+        => admin ko index page. 
+        => yo page bata admin ko aru jun sukai page ma jana milna paro.
+
+        work status 
+
+
+    f. rental_overview.php 
+        => kun kun car rent ma gaya herni page.
+
+        work status 
+
+
+
+    g. rental_view.php 
+        => rent ko details herni page. 
+
+        work status
+
+
+
+    h. user_overview.php 
+        => users haru ko overview herni page. Tables ma.
+
+        work status 
+
+
+    i. user_view.php 
+        => user ko details herni page. 
+
+        work status 
+
+
+asserts
+    A. css 
+    B. js 
+    C. queries.sql 
+
+
+include 
+    a. admin_footer.php 
+    => Admin ko footer haru bhaya ko page. 
+
+    work status 
+
+
+
+    b. admin_header.php 
+    => admin ko header haru bhaya ko page.
+
+    work status 
+
+
+
+    c. footer.php 
+    => user ko footer haru bhaya ko page.
+
+    work status
+
+
+
+    d. header.php 
+    => user ko header haru bhaya ko page. 
+
+    work status 
+
+
+process
+    a. admin_secure.php 
+    => Admin ho ke nai check garni page. 
+
+    work status
+    => completed -> admin ho ke nai check garni logic completed.
+
+
+    b. db.php
+    => Database access garni page.
+
+    work status
+    => completed -> database access garni code sakio. 
+
+
+    c. logout.php 
+    => user lai logout garni page.
+
+    work status 
+    => garna baki cha. 
+
+
+    d. user_secure.php
+    => local user login bhayo ke nai check garni page. 
+    User la car book garna bhanda paila login huna parcha. 
+    Tei check garni page.
+
+    work status 
+    =>Completed -> User login cha ke nai check garni logic sakio.
+
+
+uploads 
+=> car ko photo haru huni page.
+
+work status
+=> completed. 
+
+
+about.html 
+    => Company ko bara ma details dekhauni page.
+    => Nav bar user ko index lai include garauni.
+    => main section ma company ko bara ma halka lekhni. 
+    => footer ma user ko index ko footer lai include garauni.
+
+
+car_rental.sql
+    => database ko structure wala file
+
+    work status 
+    => completed. 
+
+
+carbook.php 
+    => user la index ko book car bhani button ma click gara pochi dekhauni page. 
+    => Nav bar user ko index lai include garauni. 
+    => main section ma car ko bara ma details dekhauni.
+    => user bata kati din ko lagi car lini ho data ligni. 
+
+    => Ani arko section ma user la data submit gari saka pochi total price ra token provide garni. 
+    => footer ma user ko index ko footer lai include garauni.
+
+
+contact.html 
+    => company ko contact page.
+    => Nav bar user ko index lai include garauni.
+    => main section ko left side ma halka company ko info. 
+    => main section ko right side ma user bata lini form.
+    => footer ma user ko index ko footer lai include garauni.
+
+
+index.html 
+    => yo page lai delete gara ra index.php ma kam garni. 
+
+
+index.php 
+    => user lai dekhauni main page. 
+    => Nav bar ma left pati company ko logo ra search bar.
+    => middle ma home about ra contact.
+    => right ma dropdown wala profile. Teo drop down bhitra login ,logout, signin huna parcha.
+    => main section ma car haru ko cards dekhauni.
+    =>footer ma alikati about ko info left ma middle ma links haru ani right ma map.
+
+
+user_login.php 
+    => login page. 
+
+
+user_register.php
+    => register page. 
+
+    work status
