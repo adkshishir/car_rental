@@ -19,9 +19,44 @@ if (isset($_GET['id'])) {
     </head>
 
     <body>
-<header>
-    <center><h2>Book your car</h2></center>
-</header>
+    <button onclick='toggleNav()' class='button btn-circle'>Menu</button>
+    <header class="main-header nav-menu active" id='navMenu' >
+      <h1 class="title">Ezy Rentals</h1>
+      <div class='search-box'>
+        <input type="text" placeholder="Search" />
+        <button
+          class="button button-blue"
+        >
+          Search
+        </button>
+      </div>
+      <nav class="nav nav-bar">
+        <ul class="nav nav-ul nav-sticky">
+          <li class="nav-element">Home</li>
+          <li class="nav-element">About</li>
+          <li class="nav-element">Contact</li>
+          <!-- <li class="nav-element">Home</li> -->
+        </ul>
+      </nav>
+      <div class="dropdown">
+        <button class="button button-green">Profile</button>
+        <div class="dropdown-content">
+          <?php
+          if(isset($_SESSION['email'])){
+            ?>
+            <a class="dropdown-item" href="process/logout.php">Logout</a>
+          <?php
+          }else{
+          ?>
+          <a class="dropdown-item" href="user_login.php">Login</a>
+          <a class="dropdown-item" href="user_register.php">Sign Up</a>
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+    </header>
+    <h2>Book you car</h2>
 <main>
     <?php
     if($insertresult){

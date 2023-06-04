@@ -11,10 +11,27 @@
 
           <nav class=" ">
             <ul class="" style="list-style: none">
-              <li>Dashboard</li>
-              <li>Car register</li>
+              <li class='nav-element'>Dashboard</li>
+              <li class='nav-element'>Car register</li>
             </ul>
           </nav>
+          <div class=" admin-dropdown">
+        <button class="button button-green">Profile</button>
+        <div class="dropdown-content">
+          <?php
+          if(isset($_SESSION['email'])){
+            ?>
+            <a class="dropdown-item" href="process/logout.php">Logout</a>
+          <?php
+          }else{
+          ?>
+          <a class="dropdown-item" href="user_login.php">Login</a>
+          <a class="dropdown-item" href="user_register.php">Sign Up</a>
+          <?php
+          }
+          ?>
+        </div>
+      </div>
         </center>
       </header>
       <main class="admin-main white">

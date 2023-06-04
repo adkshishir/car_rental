@@ -12,10 +12,36 @@
     <title>View Car</title>
 </head>
 <body>
-    <header>
-        <h2>The details of the car:</h2>
-    </header>
-    <main>
+<header class="admin-header white">
+        <center>
+          <h1 class="title">Admin Dashboard</h1>
+
+          <nav class=" ">
+            <ul class="" style="list-style: none">
+              <li class='nav-element'>Dashboard</li>
+              <li class='nav-element'>Car register</li>
+            </ul>
+          </nav>
+          <div class=" admin-dropdown">
+        <button class="button button-green">Profile</button>
+        <div class="dropdown-content">
+          <?php
+          if(isset($_SESSION['email'])){
+            ?>
+            <a class="dropdown-item" href="process/logout.php">Logout</a>
+          <?php
+          }else{
+          ?>
+          <a class="dropdown-item" href="user_login.php">Login</a>
+          <a class="dropdown-item" href="user_register.php">Sign Up</a>
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+        </center>
+      </header>
+    <main class='admin-main white'>
         <section>
             <div class="name">
                 <div class="label">Car Name: </div>

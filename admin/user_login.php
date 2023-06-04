@@ -16,7 +16,7 @@
     <main>
         <section class='form-section'>
        <div>
-       <h2>Enter your details</h2>
+       <h2>Admin login</h2>
             <form action="#" method="post" onsubmit='return validationForm_login()' >
                 <?php
                 if (isset($_POST['submit'])) {

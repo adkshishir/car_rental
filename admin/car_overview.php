@@ -1,23 +1,42 @@
 <?php
     include '../include/admin_header.php';
-    require '../process/db.php';
-    require '../process/admin_secure.php';
+    // require '../process/db.php';
+    // require '../process/admin_secure.php';
 ?>
     <title>Car Overview</title>
     
 </head>
 <body>
-<header class='main-header admin-header'>
-    <h1 class='title'> Ezy Rental </h1>
-    <nav class="nav nav-bar">
-        <ul class="nav nav-ul nav-sticky">
-          <li class="nav-element">Dashboard</li>
-          <li class="nav-element">Car Register</li>
-         
-        </ul>
-      </nav>
-    </header>
-    <main >
+<header class="admin-header white">
+        <center>
+          <h1 class="title">Admin Dashboard</h1>
+
+          <nav class=" ">
+            <ul class="" style="list-style: none">
+              <li class='nav-element'>Dashboard</li>
+              <li class='nav-element'>Car register</li>
+            </ul>
+          </nav>
+          <div class=" admin-dropdown">
+        <button class="button button-green">Profile</button>
+        <div class="dropdown-content">
+          <?php
+          if(isset($_SESSION['email'])){
+            ?>
+            <a class="dropdown-item" href="process/logout.php">Logout</a>
+          <?php
+          }else{
+          ?>
+          <a class="dropdown-item" href="user_login.php">Login</a>
+          <a class="dropdown-item" href="user_register.php">Sign Up</a>
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+        </center>
+      </header>
+    <main class='admin-main white'>
         <section class='car-collection' >
            <div class=''>
            <h2> 

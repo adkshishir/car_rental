@@ -12,11 +12,39 @@
     <title>User view</title>
 </head>
 <body>
-    <header>
-        <h1>User details
+<header class="admin-header white">
+        <center>
+          <h1 class="title">Admin Dashboard</h1>
+
+          <nav class=" ">
+            <ul class="" style="list-style: none">
+              <li class='nav-element'>Dashboard</li>
+              <li class='nav-element'>Car register</li>
+            </ul>
+          </nav>
+          <div class=" admin-dropdown">
+        <button class="button button-green">Profile</button>
+        <div class="dropdown-content">
+          <?php
+          if(isset($_SESSION['email'])){
+            ?>
+            <a class="dropdown-item" href="process/logout.php">Logout</a>
+          <?php
+          }else{
+          ?>
+          <a class="dropdown-item" href="user_login.php">Login</a>
+          <a class="dropdown-item" href="user_register.php">Sign Up</a>
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+        </center>
+      </header>
+  
+    <main class='admin-main white'>
+    <h1>User details
         </h1>
-    </header>
-    <main>
         <section>
             <div class="name">
                 <div class="label">Name:</div>

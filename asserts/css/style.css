@@ -29,7 +29,7 @@ body {
   margin: 0.5rem;
   border-radius: 1rem;
   padding: 0.5rem;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   width: fit-content;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -285,7 +285,10 @@ a:hover {
   display: inline-block;
   margin-left: 10vw;
 }
-
+.admin-dropdown {
+  position: relative;
+  display: inline-block;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -298,7 +301,12 @@ a:hover {
 
 .dropdown:hover .dropdown-content {
   color: black;
-  background-color: #500000;
+  background-color: #001050;
+  display: grid;
+}
+.admin-dropdown:hover .dropdown-content {
+  color: black;
+  background-color: #000850;
   display: grid;
 }
 
