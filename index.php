@@ -15,8 +15,9 @@
     <button onclick='toggleNav()' class='button btn-circle'>Menu</button>
     <header class="main-header nav-menu active" id='navMenu' >
       <h1 class="title">Ezy Rentals</h1>
-      <div>
-        <input type="text" placeholder="Search" /><button
+      <div class='search-box'>
+        <input type="text" placeholder="Search" />
+        <button
           class="button button-green"
         >
           Search
@@ -52,7 +53,7 @@
       <h1 class="car-collection">some category</h1>
       <section class="car-collection">
         <div class="car-detail">
-          <img src="some image" />
+          <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -66,7 +67,7 @@
           </div>
         </div>
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -80,7 +81,7 @@
           </div>
         </div>
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -94,7 +95,7 @@
           </div>
         </div>
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -108,7 +109,7 @@
           </div>
         </div>
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -122,7 +123,7 @@
           </div>
         </div>
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -139,7 +140,7 @@
       <h1 class="car-collection">some category</h1>
       <section class="car-collection">
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -154,7 +155,7 @@
         </div>
 
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -214,7 +215,7 @@
           </div>
         </div>
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">
@@ -228,7 +229,7 @@
           </div>
         </div>
         <div class="car-detail">
-          <img src="some image" />
+        <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg" class='img img-small' />
           <h2>name</h2>
           <h3>model</h3>
           <div class="nav">

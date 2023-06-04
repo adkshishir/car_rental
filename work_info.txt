@@ -61,7 +61,7 @@ admin
 asserts
     A. css 
     B. js 
-    C. queries.sql 
+    
 
 
 include 
@@ -173,6 +173,7 @@ index.php
     => right ma dropdown wala profile. Teo drop down bhitra login ,logout, signin huna parcha.
     => main section ma car haru ko cards dekhauni.
     =>footer ma alikati about ko info left ma middle ma links haru ani right ma map.
+    =>profile button fitted
 
 
 user_login.php 
@@ -183,3 +184,9 @@ user_register.php
     => register page. 
 
     work status
+
+
+
+
+
+
