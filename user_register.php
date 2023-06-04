@@ -61,7 +61,6 @@ require 'process/db.php';
                     #email checking starts here
                     $emailcount = 0;
                     if (!empty($email)) {
-                        echo "email check ma aya.";
                         $select = "SELECT email FROM users where email='$email'";
                         $emailcheck = mysqli_query($connect, $select);
                         $emailcount = mysqli_num_rows($emailcheck);
@@ -72,7 +71,6 @@ require 'process/db.php';
                     #email checking ends here
 
                     if ((!empty($name)) && (!empty($email)) && (!empty($contact)) && (!empty($address)) && (strlen($password) >= 4) && ($password == $conpass) && ($emailcount == 0)) {
-                        echo "Insertion ma aya";
                         $password = md5($password);
                         $insert = "INSERT INTO users (name,email,contact,address,password) VALUES('$name','$email','$contact','$address','$password')";
                         $result = mysqli_query($connect, $insert);
@@ -86,13 +84,15 @@ require 'process/db.php';
                             } else {
                             ?>
                                 <script>
-                                    location.replace("user-login.php");
+                                    location.replace("user_login.php");
                                 </script>
                 <?php
                             }
                         }
                     } else {
-                        echo "Doesn't created";
+                        ?>
+                        <div class="error"><?php echo "Doesn't created";?></div>
+                        <?php
                     }
                 }
                 ?>

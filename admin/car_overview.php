@@ -72,17 +72,6 @@
                 <?php 
                     }
                     ?>
-                <tr>
-                    <td>1</td>
-                    <td>BMW</td>
-                    <td>lsjdfw23</td>
-                    <td><a href="../uploads/" target="_blank"><img src="../uploads/" alt="car"></a></td>
-                    <td>
-                        <a href="http://"><button class='button button-green '>View more</button></a>
-                        <a href="http://"><button class='button button-blue'>Edit</button></a>
-                        <a href="http://"><button class='button button-red'>Delete</button></a>
-                    </td>
-                </tr>
             </table></div>
         </section>
     </main>
