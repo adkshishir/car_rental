@@ -23,17 +23,18 @@ function validationForm_userRegistation() {
     return false;
   }
   checkUsernameAvilability(email);
-  if (contact === "") {
-    let contactError = document.getElementById("contactError");
-    contactError.textContent = "contact is required";
-    return false;
-  }
 
   if (address === "") {
     let addressError = document.getElementById("addressError");
     addressError.textContent = "please enter you address";
     return false;
   }
+  if (contact === "") {
+    let contactError = document.getElementById("contactError");
+    contactError.textContent = "contact is required";
+    return false;
+  }
+
   if (password === "") {
     passwordError.textContent = "you forget to enter your password";
     return false;

@@ -21,6 +21,9 @@ body {
   background: white;
   z-index: 2;
 }
+.admin-header {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 .title {
   margin: 0.5rem;
@@ -128,6 +131,7 @@ main {
 form {
   width: fit-content;
   height: fit-content;
+  background-color: white;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 5px rgb(204, 205, 255);
