@@ -7,7 +7,6 @@ function validationForm_userRegistation() {
   let conpassword = document.getElementById("conpass").value;
   let passwordError = document.getElementById("passwordError");
   let conpassError = document.getElementById("conpassError");
-
   const errorMessages = document.querySelectorAll(".error");
   errorMessages.forEach(function (errorMessage) {
     errorMessage.textContent = "";
@@ -23,7 +22,6 @@ function validationForm_userRegistation() {
     return false;
   }
   checkUsernameAvilability(email);
-
   if (address === "") {
     let addressError = document.getElementById("addressError");
     addressError.textContent = "please enter you address";
@@ -34,25 +32,22 @@ function validationForm_userRegistation() {
     contactError.textContent = "contact is required";
     return false;
   }
-
-  if (password === "") {
+  if (password == "") {
     passwordError.textContent = "you forget to enter your password";
-    event.preventDefault();
+
     return false;
   }
   if (length(password) <= 3) {
     passwordError.textContent = "password must be at least 4 characters";
-    event.preventDefault();
+
     return false;
   }
   if (length(password) >= 50) {
     passwordError.textContent = "password must be at less than 50 characters";
-
     return false;
   }
-  if (conpassword === "") {
+  if (conpassword == "") {
     conpassError.textContent = "you forget to re enter your password";
-    event.preventDefault();
     return false;
   }
   if (password !== conpassword) {

@@ -223,8 +223,9 @@ textarea {
 
 /* footer */
 .footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
   background-color: black;
   position: sticky;
   top: -80vh;
@@ -254,7 +255,12 @@ a:hover {
 .footer-nav {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
+}
+.left-footer {
+  width: fit-content;
+  margin: auto;
+  height: fit-content;
 }
 /* about us */
 .about-all {
@@ -366,6 +372,7 @@ a:hover {
   .footer {
     display: grid;
     justify-content: center;
+    grid-template-columns: 1fr;
   }
   iframe {
     width: 100%;

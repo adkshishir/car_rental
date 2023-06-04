@@ -18,7 +18,7 @@
       </nav>
     </header>
     <main >
-        <section class='form-section' >
+        <section class='car-collection' >
            <div class=''>
            <h2> 
              Car Overview

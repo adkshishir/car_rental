@@ -4,15 +4,19 @@ function validationForm_login() {
   let emailError = document.getElementsById("emailError");
   let passwordError = document.getElementsById("passwordError");
 
-  if (email === "") {
+  const errorMessages = document.querySelectorAll(".error");
+  errorMessages.forEach(function (errorMessage) {
+    errorMessage.textContent = "";
+  });
+  if (email == "") {
     emailError.textContent = "please enter a valid email";
     return false;
   }
-  if (password === "") {
+  if (password == "") {
     passwordError.textContent = "please enter password";
     return false;
   }
-  login(email, password);
+  return true;
 }
 
 //check usernames and passwords match or not

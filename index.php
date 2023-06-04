@@ -19,7 +19,7 @@ session_start();
       <div class='search-box'>
         <input type="text" placeholder="Search" />
         <button
-          class="button button-green"
+          class="button button-blue"
         >
           Search
         </button>
@@ -246,16 +246,17 @@ session_start();
       </section>
     </main>
     <footer class="footer">
-      <div>
+     <center>
+       <div class='left-footer'>
         <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
-        <ul class="footer-nav">
+        <ul class="">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
           </li>
-          <a href="about.html"> About</a>
-          <a href="contact.html"> Contact</a>
+         <li> <a href="about.php"> About</a></li>
+         <li> <a href="contact.php"> Contact</a></li>
         </ul>
-      </div>
+      </div></center>
       <iframe
         frameborder="0"
         src="https://www.google.com/maps/embed/v1/place?q=Sydney+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
