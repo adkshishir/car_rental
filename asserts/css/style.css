@@ -104,6 +104,7 @@ th {
   padding: 2px;
   font-weight: 600;
   background: rgb(177, 0, 0);
+
   color: rgb(255, 255, 255);
 }
 tr:nth-child(even) {
@@ -163,16 +164,34 @@ input:focus {
   padding: 5px;
   margin: auto;
   font-size: 1.3rem;
-  background-color: rgb(65, 65, 255);
   color: white;
   border-radius: 0.5rem;
   outline: solid 3px rgba(118, 118, 118, 0.775);
   border: none;
 }
 .button:hover {
-  background-color: rgb(52, 52, 255);
-  outline: solid 3px blue;
   cursor: pointer;
+}
+.button-green {
+  background-color: rgb(95, 255, 95);
+}
+.button-green:hover {
+  background-color: rgb(64, 255, 64);
+  outline: rgb(0, 255, 60) solid 3px;
+}
+.button-blue {
+  background-color: rgb(52, 52, 255);
+}
+.button-blue:hover {
+  background-color: rgb(65, 65, 255);
+  outline: solid 3px blue;
+}
+.button-red {
+  background-color: rgb(255, 121, 121);
+}
+.button-red:hover {
+  background-color: rgb(255, 64, 64);
+  outline: rgb(255, 0, 0) solid 3px;
 }
 textarea {
   width: 100%;
