@@ -2,11 +2,9 @@
 session_start();
 require 'process/user_secure.php';
 require 'process/db.php';
+require 'booking_check.php';
 if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $selectcar="SELECT * FROM car WHERE cid=$id";
-    $carresult=mysqli_query($connect,$selectcar);
-    $cararr=$carresult->fetch_assoc();
+    
 ?>
     <!DOCTYPE html>
     <html lang="en">
