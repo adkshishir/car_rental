@@ -33,8 +33,8 @@ session_start();
         </button>
       </div>
       </form>
-      <nav class="nav nav-bar">
-        <ul class="nav nav-ul nav-sticky">
+      <nav class="nav ">
+        <ul class="nav nav-ul ">
           <li class="nav-element">Home</li>
           <li class="nav-element">About</li>
           <li class="nav-element">Contact</li>
@@ -43,6 +43,7 @@ session_start();
       </nav>
       <div class="dropdown">
         <button class="button button-green">Profile</button>
+        
         <div class="dropdown-content">
           <?php
           if(isset($_SESSION['email'])){
@@ -77,7 +78,7 @@ session_start();
         <div class="car-detail">
           <h2>Name: <?php echo $cararr['name'];?></h2>
           <img src="uploads/<?php echo $cararr['photo'];?>" class='img-small' />
-          <h3>Model: <?php echo $cararr['model'];?></h3>
+          <h3 class='car-desc'>Model: <?php echo $cararr['model'];?></h3>
           
             <h3>Price/day: $<?php echo $cararr['price'];?></h3>
           

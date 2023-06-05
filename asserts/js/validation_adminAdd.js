@@ -37,4 +37,5 @@ function validationForm_adminAdd() {
     photoError.textContent = "forgot to enter the photo of the car";
     return false;
   }
+  return true;
 }

@@ -188,6 +188,7 @@ require 'process/db.php';
  </footer>
     <script src='asserts/js/validation_userRegistration.js'>
     </script>
+     <script src='asserts/js/toggleNav.js'> </script>
 </body>
 
 </html>

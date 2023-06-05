@@ -16,6 +16,7 @@ if (isset($_GET['id'])) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Car / Book</title>
+        <link rel="stylesheet" href="asserts/css/style.css">
     </head>
 
     <body>
@@ -56,19 +57,23 @@ if (isset($_GET['id'])) {
         </div>
       </div>
     </header>
-    <h2>Book you car</h2>
+    
 <main>
     
-    <section>
-        <div class="name">
+    <section class='car-collection'>
+      <div class='car-detail'>
+       <h2>Book you car</h2>
+       <div class="name">
             <div class="label">Car Name:</div>
             <div class="value"><?php echo $cararr['name'];?></div>
         </div>
         <div class="photo">
             <div class="label">Car Photo:</div>
-            <div class="value"><img src="uploads/<?php echo $cararr['photo'];?>" alt="car_photo"></div>
+            <div class="value"><img src="uploads/<?php echo $cararr['photo'];?>" alt="car_photo" class='img'></div>
         </div>
-        <div class="model">
+        </div>
+       <div class='car-detail ' style='max-width:600px;'>
+       <div class="model">
             <div class="label">Car model:</div>
             <div class="value"><?php echo $cararr['model'];?></div>
         </div>
@@ -81,7 +86,7 @@ if (isset($_GET['id'])) {
             <div class="value"><?php echo $cararr['price'];?></div>
         </div>
         <div class="description">
-            <div class="label">Car description:</div>
+            <div class="label " style='max-width:300px;' >Car description:</div>
             <div class="value"><?php echo $cararr['description'];?></div>
         </div>
         
@@ -112,9 +117,10 @@ if (isset($_GET['id'])) {
                 <input type="number" name="lob" id="lob">
             </div>
             <div>
-                <button type="submit" name="submit">Book</button>
+                <button type="submit" name="submit" class='button button-blue'>Book</button>
             </div>
         </form>
+       </div>
     </section>
 </main>
 <?php
@@ -140,6 +146,7 @@ else{
      src="https://www.google.com/maps/embed/v1/place?q=Sydney+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
    ></iframe>
  </footer>
+ <script src='asserts/js/toggleNav.js'> </script>
    
     </body>
 
