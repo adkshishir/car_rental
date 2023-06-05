@@ -15,6 +15,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Car / View</title>
+        <link rel="stylesheet" href="asserts/css/style.css">
     </head>
 <body>
 <button onclick='toggleNav()' class='button btn-circle'>Menu</button>
@@ -56,18 +57,21 @@
     </header>
     <h2>Details of the cars</h2>
     <main>
-        <section>
-            <div class="name">
+        <section class='car-collection'>
+          <div class='car-detail'>
+          <div class="name">
                 <div class="label">Car Name: </div>
                 <div class="value"><?php echo $cararr['name'];?></div>
             </div>
 
             <div class="name">
                 <div class="label">Photo: </div>
-                <div class="value"><img src="uploads/<?php echo $cararr['photo'];?>" alt="car_image"></div>
+                <div class="value"><img src="uploads/<?php echo $cararr['photo'];?>" alt="car_image" class='img'></div>
             </div>
 
-            <div class="name">
+          </div>
+           <div class='car-detail' style='max-width:600px;'>
+           <div class="name">
                 <div class="label">Car model: </div>
                 <div class="value"><?php echo $cararr['model'];?></div>
             </div>
@@ -83,9 +87,10 @@
             </div>
 
             <div class="name">
-                <div class="label">Description: </div>
+                <div class="label" style='max-width:300px;'>Description: </div>
                 <div class="value"><?php echo $cararr['description'];?></div>
             </div>
+           </div>
         </section>
     </main>
     <footer class="footer">
@@ -105,6 +110,7 @@
      src="https://www.google.com/maps/embed/v1/place?q=Sydney+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
    ></iframe>
  </footer>
+ <script src='asserts/js/toggleNav.js'> </script>
     <?php
     }
     ?>

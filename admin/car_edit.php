@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
           <h1 class="title">Admin Dashboard</h1>
 
           <nav class=" ">
-            <ul class="" style="list-style: none">
+            <ul class=" nav nav-ul" style="list-style: none">
               <li class='nav-element'>Dashboard</li>
               <li class='nav-element'>Car register</li>
             </ul>
