@@ -99,6 +99,9 @@ if (isset($_GET['id'])) {
                         if(($insertresult)){
                                 $update="UPDATE car SET status='b' where cid=$id";
                                 $updateresult=mysqli_query($connect,$update);
+                                ?>
+                                    <script>location.replace("billprint.php");</script>
+                                <?php 
                         }
                     }
                 }
