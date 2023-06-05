@@ -8,27 +8,7 @@ if (isset($_GET['id'])) {
     session_start();
     include 'include/header.php';
 ?>
-<<<<<<< HEAD
     <title>Bill Print</title>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bill print</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="asserts/css/style.css">
->>>>>>> f276f021f7b8e063e71b24c37882a34bf6adb542
 </head>
 <body>
 <header class="main-header nav-menu active none-printable" id='navMenu' >
