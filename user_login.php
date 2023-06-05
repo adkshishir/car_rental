@@ -71,6 +71,7 @@
                     $arr = $emailCount->fetch_assoc();
                     $count = mysqli_num_rows($emailCount);
                     if ($count == 1) {
+
                         session_start();
                         $_SESSION['email'] = $arr['email'];
                         $_SESSION['id'] = $arr['uid'];
@@ -89,6 +90,11 @@
                             </script>
                 <?php
                         }
+                    }
+                    else{
+                      
+                      echo "Enter correct email and password";
+                      
                     }
                 }
                 ?>
@@ -133,7 +139,7 @@
    ></iframe>
  </footer>
     <script src='asserts/js/validation_login.js'>
-    </script>
+    </>
      <script src='asserts/js/toggleNav.js'> </script>
 </body>
 

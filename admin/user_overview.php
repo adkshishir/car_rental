@@ -45,6 +45,7 @@ include '../include/admin_header.php';
                     <th>S.N</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Status</th>
                     <th>Action</th>
                 </tr>
                 <?php 
@@ -57,6 +58,7 @@ include '../include/admin_header.php';
                     <td><?php echo ++$i; ?></td>
                     <td><?php echo $usrarr['name'];?></td>
                     <td><?php echo $usrarr['email'];?></td>
+                    <td><?php echo ($usrarr['status']=='a')?"Admin":"Local User";?></td>
                     <td><a href="user_view.php?id=<?php echo $usrarr['uid'];?>"><button class='button button-green'>View more</button></a>
                     </td>
                 </tr>
