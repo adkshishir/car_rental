@@ -14,34 +14,36 @@
 <body>
 <div class='admin-body'>
 <header class="admin-header white">
-        <center>
-          <h1 class="title">Admin Dashboard</h1>
-
-          <nav class=" ">
-            <ul class="" style="list-style: none">
-              <li class='nav-element'>Dashboard</li>
-              <li class='nav-element'>Car register</li>
-            </ul>
-          </nav>
-          <div class=" admin-dropdown">
-        <button class="button button-green">Profile</button>
-        <div class="dropdown-content">
-          <?php
-          if(isset($_SESSION['email'])){
+      <center>
+        <h1 class="title">Ezy Rental</h1>
+   <h2>Admin </h2>
+        <nav class="">
+          <ul class=" admin-nav-ul" style="list-style: none">
+            <li class='admin-nav-element'>Dashboard</li>
+            <li class='admin-nav-element'>Car register</li>
+            <li class='admin-nav-element'>Rental Overview</li>
+            <li class='admin-nav-element'>Car Overview</li>
+          </ul>
+        </nav>
+        <div class=" admin-dropdown">
+        <img src="../uploads/profile.png" alt="logo" class='img-circle'>
+          <div class="dropdown-content">
+            <?php
+            if (isset($_SESSION['email'])) {
             ?>
-            <a class="dropdown-item" href="process/logout.php">Logout</a>
-          <?php
-          }else{
-          ?>
-          <a class="dropdown-item" href="user_login.php">Login</a>
-          <a class="dropdown-item" href="user_register.php">Sign Up</a>
-          <?php
-          }
-          ?>
+              <a class="dropdown-item" href="process/logout.php">Logout</a>
+            <?php
+            } else {
+            ?>
+              <a class="dropdown-item" href="user_login.php">Login</a>
+              <a class="dropdown-item" href="user_register.php">Sign Up</a>
+            <?php
+            }
+            ?>
+          </div>
         </div>
-      </div>
-        </center>
-      </header>
+      </center>
+    </header>
     <main class='admin-main white'>
         <section class='car-collection '>
         <div>
