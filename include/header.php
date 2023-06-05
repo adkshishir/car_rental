@@ -1,5 +1,6 @@
 <?php
 require 'process/db.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
