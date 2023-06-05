@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'process/user_secure.php';
 require 'process/db.php';
 if (isset($_GET['id'])) {
@@ -100,7 +101,7 @@ if (isset($_GET['id'])) {
                                 $update="UPDATE car SET status='b' where cid=$id";
                                 $updateresult=mysqli_query($connect,$update);
                                 ?>
-                                    <script>location.replace("billprint.php");</script>
+                                    <script>location.replace("billprint.php?id=<?php echo $id;?>");</script>
                                 <?php 
                         }
                     }
