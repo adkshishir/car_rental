@@ -8,9 +8,15 @@ include '../include/admin_header.php';
 
 <body>
   <div class="admin-body">
+
+  <!-- <========== ADMIN ASIDE AND HEADER STARTS ===========> -->
+
     <?php
       include '../include/admin_aside.php';
     ?>
+
+  <!-- <========== ADMIN ASIDE AND HEADER ENDS ===========> -->
+  
     <main class="admin-main white">
       <h2>Rented cars</h2>
       <table>
