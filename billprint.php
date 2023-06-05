@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bill print</title>
 </head>
 <body>
     <!DOCTYPE html>
@@ -24,16 +24,53 @@ if (isset($_GET['id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="asserts/css/style.css">
 </head>
 <body>
-    <section id="print">
+<header class="main-header nav-menu active none-printable" id='navMenu' >
+      <h1 class="title">Ezy Rentals</h1>
+      <div class='search-box'>
+        <input type="text" placeholder="Search" />
+        <button
+          class="button button-blue"
+        >
+          Search
+        </button>
+      </div>
+      <nav class="nav nav-bar">
+        <ul class="nav nav-ul nav-sticky">
+          <li class="nav-element">Home</li>
+          <li class="nav-element">About</li>
+          <li class="nav-element">Contact</li>
+          <!-- <li class="nav-element">Home</li> -->
+        </ul>
+      </nav>
+      <div class="dropdown">
+        <button class="button button-green">Profile</button>
+        <div class="dropdown-content">
+          <?php
+          if(isset($_SESSION['email'])){
+            ?>
+            <a class="dropdown-item" href="process/logout.php">Logout</a>
+          <?php
+          }else{
+          ?>
+          <a class="dropdown-item" href="user_login.php">Login</a>
+          <a class="dropdown-item" href="user_register.php">Sign Up</a>
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+    </header>
+    <section id="print" class='print-section car-collection'>
         <!-- yo user lai download garna dini wala file ho hai. -->
-        <div class="name">
+       <div class='car-detail'> <div class="name">
                 <div class="label">User ID: </div>
                 <div class="value"><?php echo $_SESSION['id'];?></div>
             </div>
         <div class="name">
-                <div class="label">Car id: </div>
+                <div class="label ">Car id: </div>
                 <div class="value"><?php echo $cararr['cid'];?></div>
             </div>
         <div class="name">
@@ -62,9 +99,11 @@ if (isset($_GET['id'])) {
             <div class="token">
                 <div class="label">Token: </div>
                 <div class="value"><?php echo $token;?></div>
-            </div>
-            <button>Print</button>
+            </div></div>
+            
     </section>
+  <center>  <button class='button button-blue non-printable ' onclick="billPrint()">Print</button></center>
+<script src='asserts/js/billPrint.js'></script>
     <?php
 }
     ?>

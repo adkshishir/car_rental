@@ -9,18 +9,20 @@ require '../process/admin_secure.php';
 
 <body>
   <div class='admin-body'>
-    <header class="admin-header white">
+  <header class="admin-header white">
       <center>
-        <h1 class="title">Admin Dashboard</h1>
-
-        <nav class=" ">
-          <ul class="" style="list-style: none">
-            <li class='nav-element'>Dashboard</li>
-            <li class='nav-element'>Car register</li>
+        <h1 class="title">Ezy Rental</h1>
+   <h2>Admin </h2>
+        <nav class="">
+          <ul class=" admin-nav-ul" style="list-style: none">
+            <li class='admin-nav-element'>Dashboard</li>
+            <li class='admin-nav-element'>Car register</li>
+            <li class='admin-nav-element'>Rental Overview</li>
+            <li class='admin-nav-element'>Car Overview</li>
           </ul>
         </nav>
         <div class=" admin-dropdown">
-          <button class="button button-green">Profile</button>
+        <img src="../uploads/profile.png" alt="logo" class='img-circle'>
           <div class="dropdown-content">
             <?php
             if (isset($_SESSION['email'])) {
