@@ -70,6 +70,7 @@ header form {
   margin: 0 1rem;
   width: fit-content;
 }
+
 .admin-nav-element {
   cursor: pointer;
   padding: 0.3rem;
@@ -416,6 +417,10 @@ a:hover {
   width: 100%;
   text-align: center;
   justify-content: center;
+}
+.nav-element a {
+  color: black;
+  font-weight: 600;
 }
 @media (width<1000px) {
   .btn-circle {

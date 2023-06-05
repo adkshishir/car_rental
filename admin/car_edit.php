@@ -49,7 +49,7 @@ if (isset($_GET['id'])) {
         <main class='admin-main white'>
             <section>
                 <div>
-                    <h2>Enter the details of the car:</h2>
+                    <center><h2>Enter the details of the car:</h2></center>
                     <form action="#" method="post" enctype="multipart/form-data">
                         <?php
                         if (isset($_POST['submit'])) {
