@@ -82,6 +82,9 @@ header form {
   margin: 1rem auto;
   width: fit-content;
 }
+.admin-nav-element a {
+  color: black;
+}
 .admin-nav-element:hover {
   border: 1px solid black;
   background-color: white;
