@@ -42,6 +42,7 @@ include 'include/header.php';
                             $_SESSION['email'] = $arr['email'];
                             $_SESSION['id'] = $arr['uid'];
                             $_SESSION['role'] = $arr['status'];
+                            $_SESSION['name']= $arr['name'];
 
                             if ($arr['status'] == 'a') {
                     ?>
