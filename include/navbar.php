@@ -1,5 +1,7 @@
 <header class="main-header nav-menu active" id='navMenu' >
       <h1 class="title"><a href="index.php">Ezy Rentals</a></h1>
+     
+      <nav class="nav ">
       <?php 
       if($_SERVER["PHP_SELF"]=="/car_rental/index.php"){
         ?>
@@ -22,7 +24,6 @@
       <?php
       }
       ?>
-      <nav class="nav ">
         <ul class="nav nav-ul ">
           <li class="nav-element"><a href="index.php">Home</a></li>
           <li class="nav-element"><a href="about.php">About</a></li>
@@ -30,7 +31,7 @@
         </ul>
       </nav>
       <div class="dropdown">
-        <button class="button button-green">Profile</button>
+        <img src="uploads/profile.png" alt="" class='img-circle'>
         
         <div class="dropdown-content">
           <?php
