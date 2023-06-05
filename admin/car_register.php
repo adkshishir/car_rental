@@ -106,12 +106,11 @@ require '../process/admin_secure.php';
       </section>
     </main>
   </div>
-  <footer class="footer admin-footer">
-    <div>
-      <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+  <!-- <======== FOOTER ========> -->
+  <?php
+  include '../include/admin_footer.php';
+  ?>
 
-    </div>
-  </footer>
   <script src='../asserts/js/validation_adminAdd.js'>
 
   </script>

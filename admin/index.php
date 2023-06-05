@@ -9,14 +9,14 @@ include '../include/admin_header.php';
 <body>
   <div class="admin-body">
 
-  <!-- <========== ADMIN ASIDE AND HEADER STARTS ===========> -->
+    <!-- <========== ADMIN ASIDE AND HEADER STARTS ===========> -->
 
     <?php
-      include '../include/admin_aside.php';
+    include '../include/admin_aside.php';
     ?>
 
-  <!-- <========== ADMIN ASIDE AND HEADER ENDS ===========> -->
-  
+    <!-- <========== ADMIN ASIDE AND HEADER ENDS ===========> -->
+
     <main class="admin-main white">
       <h2>Rented cars</h2>
       <table>
@@ -92,12 +92,11 @@ include '../include/admin_header.php';
       </table>
     </main>
   </div>
-  <footer class="footer admin-footer">
-    <div>
-      <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+  <!-- <======== FOOTER ========> -->
+  <?php
+  include '../include/admin_footer.php';
+  ?>
 
-    </div>
-  </footer>
 </body>
 
 </html>

@@ -49,7 +49,7 @@ include 'include/header.php';
                                 if (isset($_SESSION['id'])) {
                     ?>
                                     <script>
-                                        history.back();
+                                        history.go(-2);
                                     </script>
                                 <?php
                                 } else {

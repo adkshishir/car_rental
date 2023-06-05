@@ -15,15 +15,15 @@ if (isset($_GET['id'])) {
 
     <body>
         <div class='admin-body'>
-            
-  <!-- <========== ADMIN ASIDE AND HEADER STARTS ===========> -->
 
-    <?php
-      include '../include/admin_aside.php';
-    ?>
+            <!-- <========== ADMIN ASIDE AND HEADER STARTS ===========> -->
 
-  <!-- <========== ADMIN ASIDE AND HEADER ENDS ===========> -->
-  
+            <?php
+            include '../include/admin_aside.php';
+            ?>
+
+            <!-- <========== ADMIN ASIDE AND HEADER ENDS ===========> -->
+
             <main class='admin-main white'>
                 <section>
                     <div>
@@ -119,12 +119,11 @@ if (isset($_GET['id'])) {
                 </section>
             </main>
         </div>
-        <footer class="footer admin-footer">
-            <div>
-                <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+        <!-- <======== FOOTER ========> -->
+        <?php
+        include '../include/admin_footer.php';
+        ?>
 
-            </div>
-        </footer>
     </body>
 <?php
 }

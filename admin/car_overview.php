@@ -2,6 +2,10 @@
 include '../include/admin_header.php';
 require '../process/db.php';
 require '../process/admin_secure.php';
+
+if(isset($_GET['msg'])){
+  echo $_GET['msg'];
+}
 ?>
 <title>Car Overview</title>
 
@@ -47,7 +51,7 @@ require '../process/admin_secure.php';
                 <td>
                   <a href="car_view.php?id=<?php echo $carlist['cid']; ?>"><button class='button button-green'>View more</button></a>
                   <a href="car_edit.php?id=<?php echo $carlist['cid']; ?>"><button class='button button-blue'>Edit</button></a>
-                  <a href="http://"><button class='button button-red'>Delete</button></a>
+                  <a href="../process/delete_car.php?id=<?php echo $carlist['cid']; ?>"><button class='button button-red' onclick="return confirm('Are you sure?');">Delete</button></a>
                 </td>
               </tr>
             <?php
@@ -58,12 +62,11 @@ require '../process/admin_secure.php';
       </section>
     </main>
   </div>
-  <footer class="footer admin-footer">
-    <div>
-      <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+  <!-- <======== FOOTER ========> -->
+  <?php
+  include '../include/admin_footer.php';
+  ?>
 
-    </div>
-  </footer>
 </body>
 
 </html>

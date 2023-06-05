@@ -50,6 +50,11 @@ if (isset($_GET['id'])) {
   <?php
 }
   ?>
+  <!-- <======== FOOTER ========> -->
+  <?php
+  include '../include/admin_footer.php';
+  ?>
+
   </body>
 
   </html>

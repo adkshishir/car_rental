@@ -6,6 +6,10 @@ if (isset($_GET['id'])) {
     $selectcar = "SELECT * FROM car WHERE cid=$id";
     $carresult = mysqli_query($connect, $selectcar);
     $cararr = $carresult->fetch_assoc();
+
+    $orderlist = "SELECT * FROM orders WHERE cid = $id";
+    $orderresult = mysqli_query($connect, $orderlist);
+    $orderarr = $orderresult->fetch_assoc();
 ?>
     <title>Bill Print</title>
     </head>
@@ -44,29 +48,29 @@ if (isset($_GET['id'])) {
                 </div>
 
                 <div class="name">
-                    <div class="label">Price per day($): </div>
-                    <div class="value"><?php echo $cararr['price']; ?></div>
+                    <div class="label">Price per day: </div>
+                    <div class="value">$<?php echo $cararr['price']; ?></div>
                 </div>
                 <div class="total_price">
                     <div class="label">Total price: </div>
-                    <div class="value"><?php echo ($cararr['price'] * $lob); ?></div>
+                    <div class="value">$<?php echo ($cararr['price'] * $orderarr['lob']); ?></div>
                 </div>
                 <div class="token">
                     <div class="label">Token: </div>
-                    <div class="value"><?php echo $token; ?></div>
+                    <div class="value"><?php echo $orderarr['token']; ?></div>
                 </div>
             </div>
 
         </section>
 
+
+        <center> <button class='button button-blue non-printable ' onclick="billPrint()">Print</button></center>
+        <script src='asserts/js/billPrint.js'></script>
         <!-- <====== FOOTER ======> -->
     <?php
     include 'include/footer.php';
 }
     ?>
-    <center> <button class='button button-blue non-printable ' onclick="billPrint()">Print</button></center>
-    <script src='asserts/js/billPrint.js'></script>
-
     </body>
 
     </html>

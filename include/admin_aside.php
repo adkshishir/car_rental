@@ -18,7 +18,7 @@
             <?php
             if (isset($_SESSION['email'])) {
             ?>
-              <a class="dropdown-item" href="process/logout.php">Logout</a>
+              <a class="dropdown-item" href="../process/logout.php">Logout</a>
             <?php
             } else {
             ?>
