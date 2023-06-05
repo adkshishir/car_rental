@@ -37,7 +37,7 @@
           <?php
           if(isset($_SESSION['email'])){
             ?>
-            <div class=""><?php echo $_SESSION['name'];?></div>
+            <div class="dropdown-name"><?php echo $_SESSION['name'];?></div>
             <a class="dropdown-item" href="process/logout.php">Logout</a>
           <?php
           }else{
