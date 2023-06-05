@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2023 at 07:15 PM
+-- Generation Time: Jun 05, 2023 at 10:02 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -45,10 +45,7 @@ CREATE TABLE `car` (
 --
 
 INSERT INTO `car` (`cid`, `name`, `photo`, `model`, `color`, `price`, `status`, `description`, `created_at`, `updated_at`) VALUES
-(2, 'BMW Gran', 'bmw-2-series-gran-coupe-271220221147_1685892420.jpg', 'BMW-2-Series-Gran-Coupe-271220221147', 'Blue', 500, 'u', 'The BMW 2 Series Gran Coupe has received positive reviews from critics. Car and Driver praised its \"athletic handling,\" \"luxurious interior,\" and \"long list of standard features.\" Edmunds gave it a \"recommended\" rating, saying that it is \"a stylish and engaging car that\'s also practical and affordable.\"', '2023-06-04 11:31:04', '2023-06-04 15:27:00'),
-(3, 'BMW x5', 'bmw_x5-xdrive45e_1685878489.png', 'BMW_x5-xDrive45e', 'White', 300, 'u', 'The BMW X5 xDrive45e is a plug-in hybrid SUV that offers the best of both worlds: the performance and luxury of a BMW SUV with the fuel efficiency of an electric car. It has a 3.0-liter turbocharged six-cylinder engine and an electric motor that combine to produce 394 horsepower and 443 lb-ft of torque. The X5 xDrive45e can go up to 41 miles on electric power alone, and when the battery runs out, the gas engine kicks in to extend the range.', '2023-06-04 11:34:49', NULL),
-(4, 'Audi Sedans', 'audi_cars_sedans_suvs_1685879097.png', 'audi sedans Q7 SUV', 'smoke white', 400, 'u', 'The Q7 is a full-size SUV that offers a luxurious interior and third-row seating. It is available with a variety of engine options, including a turbocharged V6 and a V8.', '2023-06-04 11:44:57', NULL),
-(5, 'Lamborghini', 'lamborghini_invencible_lambo_v12_1685879267.jpg', 'lambo_v12', 'Black', 1000, 'u', 'The Lamborghini Invencible Lambo V12 is a concept car that was first shown at the 2022 Geneva Motor Show. It is a two-seater sports car with a mid-mounted V12 engine that produces over 1,000 horsepower. The Invencible Lambo V12 has a top speed of over 200 mph and can accelerate from 0 to 60 mph in under 2 seconds.', '2023-06-04 11:47:47', NULL);
+(6, 'BMW x5', 'bmw_x5-xdrive45e_1685952083.png', 'BMW_x5-xDrive45e', 'white', 500, 'u', 'The BMW X5 xDrive45e is a plug-in hybrid SUV that offers the best of both worlds: the performance and luxury of a BMW SUV with the fuel efficiency of an electric car. It has a 3.0-liter turbocharged six-cylinder engine and an electric motor that combine to produce 394 horsepower and 443 lb-ft of torque. The X5 xDrive45e can go up to 41 miles on electric power alone, and when the battery runs out, the gas engine kicks in to extend the range.', '2023-06-05 07:56:03', '2023-06-05 08:01:23');
 
 -- --------------------------------------------------------
 
@@ -78,13 +75,6 @@ CREATE TABLE `orders` (
   `date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`uid`, `cid`, `lob`, `token`, `date`) VALUES
-(2, 2, 2, 'hari114612BMW-2-Series-Gran-Coupe-271220221147', '2023-06-04 17:12:09');
-
 -- --------------------------------------------------------
 
 --
@@ -109,7 +99,14 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`uid`, `name`, `address`, `status`, `contact`, `email`, `password`, `created_at`, `updated_at`) VALUES
 (1, 'ram', 'pokhara', 'a', '92834023840', 'sds@gmail.com', '', '2023-06-03 05:46:22', NULL),
-(2, 'hari', 'pokhara', 'a', '98080808080', 'hari@gmail.com', 'a9bcf1e4d7b95a22e2975c812d938889', '2023-06-04 07:45:39', '2023-06-04 08:25:55');
+(2, 'hari', 'pokhara', 'a', '98080808080', 'hari@gmail.com', 'a9bcf1e4d7b95a22e2975c812d938889', '2023-06-04 07:45:39', '2023-06-04 08:25:55'),
+(3, 'Shishir', 'Kathmandu', 'l', '98080808080', 'shishir@gmail.com', '7b1fd2d96f079dc3401a3062134ab9cc', '2023-06-04 17:29:03', NULL),
+(4, 'Sagar Timilsina', 'Pokhara - 19', 'l', '972342432343', 'sagar@gmail.com', '41ed44e3038dbeee7d2ffaa7f51d8a4b', '2023-06-05 00:29:42', NULL),
+(5, 'Aashish Poudel', 'Syangja', 'l', '9834323231', 'aashish@gmail.com', '15c041aad623e58ed0572a9c1f555a4d', '2023-06-05 00:30:27', NULL),
+(6, 'Tilak', 'Rupendhai', 'a', '982308423', 'tilak@gmail.com', '077c637579be2735284e4059856e6c20', '2023-06-05 04:04:32', NULL),
+(7, 'krishna', 'Kalikot', 'l', '982308423', 'krishna@gmail.com', '243bd1ce0387f18005abfc43b001646a', '2023-06-05 07:09:49', NULL),
+(8, 'Roshan', 'Baglung', 'a', '97823473023', 'roshan@gmail.com', 'd6dfb33a2052663df81c35e5496b3b1b', '2023-06-05 07:13:08', NULL),
+(9, 'Jack', 'sydney', 'l', '9803482423', 'jack@gmail.com', '4ff9fc6e4e5d5f590c4f2134a8cc96d1', '2023-06-05 07:16:39', NULL);
 
 --
 -- Indexes for dumped tables
@@ -148,7 +145,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `car`
 --
 ALTER TABLE `car`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -160,7 +157,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

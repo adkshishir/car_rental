@@ -69,7 +69,7 @@ if (isset($_GET['id'])) {
                                     if ($carresult) {
                             ?>
                                         <script>
-                                            loaction.replace("index.php");
+                                            location.replace("car_overview.php");
                                         </script>
                             <?php
                                     }
