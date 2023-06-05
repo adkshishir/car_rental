@@ -86,18 +86,15 @@ if (isset($_GET['id'])) {
             </div></div>
             
     </section>
-<<<<<<< HEAD
     
     <!-- <====== FOOTER ======> -->
     <?php 
       include 'include/footer.php';
-=======
+    }
+?>
   <center>  <button class='button button-blue non-printable ' onclick="billPrint()">Print</button></center>
 <script src='asserts/js/billPrint.js'></script>
-    <?php
->>>>>>> f276f021f7b8e063e71b24c37882a34bf6adb542
-}
-    ?>
+   
 </body>
 </html>
 </body>
