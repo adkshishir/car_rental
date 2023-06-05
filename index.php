@@ -1,17 +1,9 @@
 <?php 
 session_start();
-  require 'process/db.php';
-  $sstatus=0;
+$sstatus=0;
+  include 'include/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ezy Rentals</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <link rel="stylesheet" href="asserts/css/style.css" />
   </head>
   <body>
     <button onclick='toggleNav()' class='button btn-circle'>Menu</button>
@@ -35,10 +27,9 @@ session_start();
       </form>
       <nav class="nav ">
         <ul class="nav nav-ul ">
-          <li class="nav-element">Home</li>
-          <li class="nav-element">About</li>
-          <li class="nav-element">Contact</li>
-          <!-- <li class="nav-element">Home</li> -->
+          <li class="nav-element"><a href="index.php">Home</a></li>
+          <li class="nav-element"><a href="about.php">About</a></li>
+          <li class="nav-element"><a href="contact.php">Contact</a></li>
         </ul>
       </nav>
       <div class="dropdown">
@@ -100,23 +91,11 @@ session_start();
         ?>
       </section>
     </main>
-    <footer class="footer">
     
-       <div class='left-footer'>
-        <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
-        <ul class="">
-          <li>
-            <a href="index.php">Home</a>
-          </li>
-         <li> <a href="about.php"> About</a></li>
-         <li> <a href="contact.php"> Contact</a></li>
-        </ul>
-      </div>
-      <iframe
-        frameborder="0"
-        src="https://www.google.com/maps/embed/v1/place?q=Sydney+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-      ></iframe>
-    </footer>
+    <!-- <====== FOOTER ======> -->
+    <?php 
+      include 'include/footer.php';
+    ?>
     <script src='asserts/js/toggleNav.js'> </script>
   </body>
 </html>

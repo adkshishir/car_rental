@@ -1,10 +1,14 @@
 <footer class="footer">
-      <div>
-        <nav class="footer-nav">
-          <a href="www.facebook.com">facebook</a>
-          <a href="www.youtube.com"> youtube</a>
-          <a href="www.insgram.com"> instagram</a>
-        </nav>
+    
+       <div class='left-footer'>
+        <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+        <ul class="">
+          <li>
+            <a href="index.php">Home</a>
+          </li>
+         <li> <a href="about.php"> About</a></li>
+         <li> <a href="contact.php"> Contact</a></li>
+        </ul>
       </div>
       <iframe
         frameborder="0"

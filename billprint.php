@@ -1,29 +1,14 @@
 <?php
-session_start();
 require 'process/user_secure.php';
-require 'process/db.php';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $selectcar="SELECT * FROM car WHERE cid=$id";
     $carresult=mysqli_query($connect,$selectcar);
     $cararr=$carresult->fetch_assoc();
+    session_start();
+    include 'include/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bill Print</title>
 </head>
 <body>
     <section id="print">
@@ -65,7 +50,10 @@ if (isset($_GET['id'])) {
             </div>
             <button>Print</button>
     </section>
-    <?php
+    
+    <!-- <====== FOOTER ======> -->
+    <?php 
+      include 'include/footer.php';
 }
     ?>
 </body>
