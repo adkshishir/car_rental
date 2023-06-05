@@ -6,7 +6,6 @@ if (isset($_GET['id'])) {
     $selectcar="SELECT * FROM car WHERE cid=$id";
     $carresult=mysqli_query($connect,$selectcar);
     $cararr=$carresult->fetch_assoc();
-    $print=0;
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -58,50 +57,7 @@ if (isset($_GET['id'])) {
     </header>
     <h2>Book you car</h2>
 <main>
-    <?php
-    if(($print)){
-        ?>
-    <section class="print">
-        <!-- yo user lai download garna dini wala file ho hai. -->
-        <div class="name">
-                <div class="label">User ID: </div>
-                <div class="value"><?php echo $_SESSION['id'];?></div>
-            </div>
-        <div class="name">
-                <div class="label">Car id: </div>
-                <div class="value"><?php echo $cararr['cid'];?></div>
-            </div>
-        <div class="name">
-                <div class="label">Car Name: </div>
-                <div class="value"><?php echo $cararr['name'];?></div>
-            </div>
-
-            <div class="name">
-                <div class="label">Car model: </div>
-                <div class="value"><?php echo $cararr['model'];?></div>
-            </div>
-
-            <div class="name">
-                <div class="label">Car Color: </div>
-                <div class="value"><?php echo $cararr['color'];?></div>
-            </div>
-
-            <div class="name">
-                <div class="label">Price per day($): </div>
-                <div class="value"><?php echo $cararr['price'];?></div>
-            </div>
-            <div class="total_price">
-                <div class="label">Total price: </div>
-                <div class="value"><?php echo ($cararr['price']* $lob);?></div>
-            </div>
-            <div class="token">
-                <div class="label">Token: </div>
-                <div class="value"><?php echo $token;?></div>
-            </div>
-    </section>
-    <?php
-    }
-    ?>
+    
     <section>
         <div class="name">
             <div class="label">Car Name:</div>
@@ -141,7 +97,8 @@ if (isset($_GET['id'])) {
                         $insert="INSERT INTO orders(uid,cid,lob,token) VALUES('$uid','$id','$lob','$token')";
                         $insertresult=mysqli_query($connect,$insert);
                         if(($insertresult)){
-                                $print=1;
+                                $update="UPDATE car SET status='b' where cid=$id";
+                                $updateresult=mysqli_query($connect,$update);
                         }
                     }
                 }

@@ -1,13 +1,13 @@
 <!-- Car ko description herni wala page  -->
 <?php
     include '../include/admin_header.php';
-    // require '../process/db.php';
-    // require '../process/admin_secure.php';
-    // if(isset($_GET['id'])){
-    //     $cid=$_GET['id'];
-    //     $selectcar="SELECT * FROM car WHERE cid='$cid'";
-    //     $carresult=mysqli_query($connect,$selectcar);
-    //     $cararr=$carresult->fetch_assoc();
+    require '../process/db.php';
+    require '../process/admin_secure.php';
+    if(isset($_GET['id'])){
+        $cid=$_GET['id'];
+        $selectcar="SELECT * FROM car WHERE cid='$cid'";
+        $carresult=mysqli_query($connect,$selectcar);
+        $cararr=$carresult->fetch_assoc();
 ?>
     <title>View Car</title>
 </head>
@@ -87,7 +87,7 @@
       </div>
     </footer>
     <?php
-    // }
+    }
     ?>
 </body>
 </html>

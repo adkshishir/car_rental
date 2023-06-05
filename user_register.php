@@ -1,5 +1,6 @@
 <?php
 // include 'include/header.php';
+session_start();
 require 'process/db.php';
 ?>
 <!DOCTYPE html>
@@ -29,7 +30,12 @@ require 'process/db.php';
         <div class="dropdown-content">
           <?php
           if(isset($_SESSION['email'])){
+            $uid=$_SESSION['id'];
+            $selectusr="SELECT name FROM users WHERE uid = $uid";
+            $usrresult=mysqli_query($connect,$selectusr);
+            $usrarr=$usrresult->fetch_assoc();
             ?>
+            <div><?php echo $usrarr['name'];?></div>
             <a class="dropdown-item" href="process/logout.php">Logout</a>
           <?php
           }else{
@@ -53,11 +59,14 @@ require 'process/db.php';
                 if (isset($_POST['submit'])) {
                     $name = $_POST['name'];
                     $email = $_POST['email'];
+                    $role=$_POST['role'];
                     $contact = $_POST['contact'];
                     $address = $_POST['address'];
                     $password = $_POST['password'];
                     $conpass = $_POST['conpass'];
-
+                    if(empty($role)){
+                        $role='l';
+                    }
                     #email checking starts here
                     $emailcount = 0;
                     if (!empty($email)) {
@@ -72,7 +81,7 @@ require 'process/db.php';
 
                     if ((!empty($name)) && (!empty($email)) && (!empty($contact)) && (!empty($address)) && (strlen($password) >= 4) && ($password == $conpass) && ($emailcount == 0)) {
                         $password = md5($password);
-                        $insert = "INSERT INTO users (name,email,contact,address,password) VALUES('$name','$email','$contact','$address','$password')";
+                        $insert = "INSERT INTO users (name,email,status,contact,address,password) VALUES('$name','$email','$role','$contact','$address','$password')";
                         $result = mysqli_query($connect, $insert);
                         if ($result) {
                             if (isset($_SESSION['id'])) {
@@ -107,6 +116,21 @@ require 'process/db.php';
                     <div id='emailError' class='error'></div>
 
                 </div>
+                <?php 
+                    if(isset($_SESSION['role'])){
+                        if($_SESSION['role']=='a'){
+                            ?>
+                                <div class="role">
+                                    <label for="status">Enter the role:</label>
+                                    <select name="role" id="status">
+                                        <option value="a">Admin</option>
+                                        <option value="l" selected>Local user</option>
+                                    </select>
+                                </div>
+                            <?php
+                        }
+                    }
+                ?>
                <div >
                <div class="address">
                     <label for="address"><span class="error">*</span>Address:</label></br>
@@ -138,7 +162,7 @@ require 'process/db.php';
                 </div>
             </form>
             <div class="link">
-                <div>Already have account: <a href="user_register.php">Login</a>
+                <div>Already have account: <a href="user_login.php">Login</a>
                 </div>
             </div>
        </div>

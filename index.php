@@ -81,11 +81,17 @@ session_start();
           
             <h3>Price/day: $<?php echo $cararr['price'];?></h3>
           
-            <h3> status: <?php echo ($cararr['status']=='u')?"Unbook":"Booked";?></h3>
+            <h3> status: <?php echo ($cararr['status']=='u')?"Not book":"Booked";?></h3>
         
           <div>
             <a href="carview.php?id=<?php echo $cararr['cid'];?>"><button class="button button-green">view more</button></a>
+            <?php 
+              if($cararr['status']=='u'){
+            ?>
             <a href="carbook.php?id=<?php echo $cararr['cid'];?>"><button class="button button-blue">book Now</button></a>
+            <?php 
+              }
+              ?>
           </div>
         </div>
         <?php 

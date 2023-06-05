@@ -48,14 +48,27 @@ require '../process/db.php';
               <th>total Amount</th>
               <th>Status</th>
             </tr>
+            <?php 
+                $i=0;
+                $selectorder="SELECT * FROM orders";
+                $orderresult=mysqli_query($connect,$selectorder);
+                while($orderlist=$orderresult->fetch_assoc()){
+                  $cid=$orderlist['cid'];
+                    $selectcar="SELECT * FROM car WHERE cid = $cid";
+                    $carresult=mysqli_query($connect,$selectcar);
+                    $carlist=$carresult->fetch_assoc();
+            ?>
             <tr>
-              <td>3</td>
+              <td><?php echo $carresult['cid'];?></td>
               <td>forari</td>
               <td>2023/02/02</td>
               <td>2023/02/06</td>
               <td>2000</td>
               <td>well</td>
             </tr>
+            <?php
+                }
+                ?>
             <tr>
               <td>6</td>
               <td>forari</td>
