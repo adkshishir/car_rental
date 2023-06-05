@@ -7,76 +7,54 @@ include '../include/admin_header.php';
 </head>
 
 <body>
-<div class='admin-body'>
-<header class="admin-header white">
-      <center>
-        <h1 class="title">Ezy Rental</h1>
-   <h2>Admin </h2>
-        <nav class="">
-          <ul class=" admin-nav-ul" style="list-style: none">
-            <li class='admin-nav-element'>Dashboard</li>
-            <li class='admin-nav-element'>Car register</li>
-            <li class='admin-nav-element'>Rental Overview</li>
-            <li class='admin-nav-element'>Car Overview</li>
-          </ul>
-        </nav>
-        <div class=" admin-dropdown">
-        <img src="../uploads/profile.png" alt="logo" class='img-circle'>
-          <div class="dropdown-content">
-            <?php
-            if (isset($_SESSION['email'])) {
-            ?>
-              <a class="dropdown-item" href="process/logout.php">Logout</a>
-            <?php
-            } else {
-            ?>
-              <a class="dropdown-item" href="user_login.php">Login</a>
-              <a class="dropdown-item" href="user_register.php">Sign Up</a>
-            <?php
-            }
-            ?>
-          </div>
-        </div>
-      </center>
-    </header>
+  <div class='admin-body'>
+
+    <!-- <========== ADMIN ASIDE AND HEADER STARTS ===========> -->
+
+    <?php
+    include '../include/admin_aside.php';
+    ?>
+
+    <!-- <========== ADMIN ASIDE AND HEADER ENDS ===========> -->
+
     <main class='admin-main white'>
-        <h3>Ezy Users</h3>
-        <section class='car-collection'>
-            <table>
-                <tr>
-                    <th>S.N</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-                <?php 
-                    $i=0;
-                    $selectusr="SELECT * FROM users";
-                    $usrresult=mysqli_query($connect,$selectusr);
-                    while($usrarr=$usrresult->fetch_assoc()){
-                ?>
-                <tr>
-                    <td><?php echo ++$i; ?></td>
-                    <td><?php echo $usrarr['name'];?></td>
-                    <td><?php echo $usrarr['email'];?></td>
-                    <td><?php echo ($usrarr['status']=='a')?"Admin":"Local User";?></td>
-                    <td><a href="user_view.php?id=<?php echo $usrarr['uid'];?>"><button class='button button-green'>View more</button></a>
-                    </td>
-                </tr>
-                <?php 
-                    }
-                    ?>
-            </table>
-        </section>
+      <h3>Ezy Users</h3>
+      <section class='car-collection'>
+        <table>
+          <tr>
+            <th>S.N</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <?php
+          $i = 0;
+          $selectusr = "SELECT * FROM users";
+          $usrresult = mysqli_query($connect, $selectusr);
+          while ($usrarr = $usrresult->fetch_assoc()) {
+          ?>
+            <tr>
+              <td><?php echo ++$i; ?></td>
+              <td><?php echo $usrarr['name']; ?></td>
+              <td><?php echo $usrarr['email']; ?></td>
+              <td><?php echo ($usrarr['status'] == 'a') ? "Admin" : "Local User"; ?></td>
+              <td><a href="user_view.php?id=<?php echo $usrarr['uid']; ?>"><button class='button button-green'>View more</button></a>
+              </td>
+            </tr>
+          <?php
+          }
+          ?>
+        </table>
+      </section>
     </main>
-</div>
-<footer class="footer admin-footer">
-      <div>
-        <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
-     
-      </div>
-    </footer>
+  </div>
+  <footer class="footer admin-footer">
+    <div>
+      <p style="color: white">&copy;2023 Ezy Rental .All rights reserved.</p>
+
+    </div>
+  </footer>
 </body>
 
 </html>
